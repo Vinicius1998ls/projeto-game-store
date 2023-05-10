@@ -74,12 +74,12 @@ export default function Header() {
             {menuIsOpen ?
                 <>
                     <hr className="h-px w-full" />
-                    <div className="w-screen h-screen bg-blue-500 flex justify-end">
-                        <ul className="flex flex-col mr-5 mt-3">
-                            <li className=" flex justify-end"><a className='menu-font' href="">Home</a></li>
-                            <li><a className='menu-font' href="">Consoles</a></li>
-                            <li className=" flex justify-end"><a className='menu-font' href="">Jogos</a></li>
-                            <li><a className='menu-font' href="">Gift card</a></li>
+                    <div className="absolute w-screen h-full bg-blue-500 z-10">
+                        <ul className="flex flex-col mr-5 mt-1">
+                            <li className="flex justify-end mt-3"><a className='menu-font' href="">Home</a></li>
+                            <li className="flex justify-end"><a className='menu-font' href="">Consoles</a></li>
+                            <li className="flex justify-end"><a className='menu-font' href="">Jogos</a></li>
+                            <li className="flex justify-end"><a className='menu-font' href="">Gift card</a></li>
                         </ul>
                     </div>
                 </>
