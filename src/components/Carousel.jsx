@@ -37,7 +37,7 @@ export default function App() {
                 modules={[Autoplay, Pagination]}
             >
                 <SwiperSlide>
-                    <img className="object-fill min-[400px]:object-contain w-full h-full" src="../imgs/Resident_evil_4.jpg" alt="" />
+                    <img className="object-fill min-[400px]:object-contain w-full h-full" src="../imgs/Resident_Evil_4.jpg" alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
                     <img className="object-fill min-[400px]:object-contain w-full h-full" src="../imgs/XboxSeries.jpg" alt="" />
