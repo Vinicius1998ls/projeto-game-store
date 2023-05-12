@@ -14,6 +14,46 @@ export function consolesList() {
         name: 'Playstation 5 Edição digital 825Gb',
         price: 3799.99,
         img: '../imgs/PS5_digital.jpg'
+      },
+      { id: 5,
+        name: 'Playstation 5 825Gb',
+        price: 3999.99,
+        img: '../imgs/PS5.jpg'
+      },
+      { id: 6,
+        name: 'Xbox one S 500Gb',
+        price: 1799.99,
+        img: '../imgs/Xbox_one_s.jpg'
+      },
+      { id: 7,
+        name: 'Xbox one X 1Tb',
+        price: 2499.99,
+        img: '../imgs/Xbox_one_x.jpg'
+      },
+      { id: 8,
+        name: 'Playstation 4 slim 500Gb',
+        price: 1999.99,
+        img: '../imgs/PS4_slim.jpg'
+      },
+      { id: 9,
+        name: 'Playstation 4 PRO 1Tb',
+        price: 2999.99,
+        img: '../imgs/PS4_pro.jpg'
+      },
+      { id: 10,
+        name: 'Nintendo Switch OLED 64Gb Standard',
+        price: 2299.99,
+        img: '../imgs/Nintendo_switch_oled.jpg'
+      },
+      { id: 11,
+        name: 'Nintendo Switch 32Gb Standard',
+        price: 2099.99,
+        img: '../imgs/Nintendo_switch.jpg'
+      },
+      { id: 12,
+        name: 'Nintendo Switch Lite 32Gb Standard',
+        price: 1399.99,
+        img: '../imgs/Nintendo_switch_lite.jpg'
       }
     ];
   
