@@ -9,7 +9,7 @@ export default function Consoles() {
     function listItems() {
         return(items.map(item => {
             return (
-                <li className="flex flex-col  w-40 min-[400px]:w-44 sm:w-52 md:w-64 m-2 border-2 border-gray-200 rounded-md">
+                <li key={item.id} className="flex flex-col  w-40 min-[400px]:w-44 sm:w-52 md:w-64 m-2 border-2 border-gray-200 rounded-md">
                     <a href="">
                         <img className="object-contain w-full h-36 sm:h-44 lg:h-52" src={item.img} alt="" />
                         <h2 className="title-item mx-1 sm:mx-5 mt-2 flex flex-wrap h-12">{item.name}</h2>
