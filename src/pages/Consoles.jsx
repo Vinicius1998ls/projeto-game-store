@@ -25,7 +25,9 @@ export default function Consoles() {
                 <div className="flex w-10/12 mt-5 justify-end min-[400px]:w-9/12 lg:justify-start lg:max-w-5xl  ">
                     <label className="font-classifler text-white bg-orange-500 p-1 rounded-lg">
                         Ordenar por:{" "}
-                        <select className="rounded-lg mt-px px-1 focus:outline-none font-classifler-option text-black" onChange={(event) => handleList(event.target.value, list)}>
+                        <select className={`"rounded-lg mt-px px-1 focus:outline-none 
+                            font-classifler-option text-black`} 
+                            onChange={(event) => handleList(event.target.value, list)}>
                             <option value="relevance">Relevância</option>
                             <option value="lowest">Menor Preço</option>
                             <option value="biggest">Maior Preço</option>
