@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@700&family=Montserrat:wght@600;800&family=Roboto:wght@400;500&family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@700&family=Montserrat:wght@600;800&family=Roboto:wght@300;400;500&family=Yellowtail&display=swap');
 
 .navbar-font {
     font-family: 'Bebas Neue', cursive;
@@ -26,3 +26,14 @@
     font-size: 1rem;
     font-weight: 600;
 }
+
+.font-classifler {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+}
+
+.font-classifler-option {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+}
+

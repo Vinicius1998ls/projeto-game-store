@@ -1,42 +1,45 @@
+import React from "react";
 import Header from "@/components/Header";
+import Classifler from "@/components/Classifler.jsx";
 import { consolesList } from '../db/Products.js'
+import react, { useState } from "react";
+import CreateList from "@/components/CreateList.jsx";
 
 
 export default function Consoles() {
-    
     const items = consolesList()
-    
-    function listItems() {
-        return(items.map(item => {
-            return (
-                <li key={item.id} className="flex flex-col  w-40 min-[400px]:w-44 sm:w-52 md:w-64 m-2 border-2 border-gray-200 rounded-md">
-                    <a href="">
-                        <img className="object-contain w-full h-36 sm:h-44 lg:h-52 mt-1" src={item.img} alt="" />
-                        <h2 className="title-item mx-1 sm:mx-5 mt-2 flex flex-wrap h-12">{item.name}</h2>
-                        <p className="font-price text-green-600 ml-1 sm:ml-5 mt-1 mb-2">
-                            R$: {(item.price).toLocaleString("pt-BR", {
-                                minimumFractionDigits: 2,
-                                maximumFractionDigits: 2
-                            })}
-                        </p>
-                    </a>
-                    <a className="flex justify-center" href="">
-                        <button className="font-button-buy text-white w-11/12 h-8 bg-red-600 rounded-md mb-1">Comprar</button>
-                    </a>
-                </li>
-            )
-        }))
+    items.sort((a, b) => b.relevance - a.relevance)
+
+    const [list, setList] = useState(items)
+
+    function handleList(value, list) {
+        let newList = [...list]
+
+        setList(Classifler(value, newList))
     }
 
     return (
         <>
             <Header></Header>
-            <main className="flex justify-center">
-                <ul className="flex flex-row flex-wrap justify-center mt-5 max-w-6xl">
-                    {listItems()}
-                </ul>
+            <main className="flex flex-col items-center">
+                <div className="flex w-10/12 mt-5 justify-end min-[400px]:w-9/12 lg:justify-start lg:max-w-5xl  ">
+                    <label className="font-classifler text-white bg-orange-500 p-1 rounded-lg">
+                        Ordenar por:{" "}
+                        <select className="rounded-lg mt-px px-1 focus:outline-none font-classifler-option text-black" onChange={(event) => handleList(event.target.value, list)}>
+                            <option value="relevance">Relevância</option>
+                            <option value="lowest">Menor Preço</option>
+                            <option value="biggest">Maior Preço</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div className="flex justify-center">
+                    <ul className="flex flex-row flex-wrap justify-center mt-5 max-w-6xl">
+                        <CreateList list={list} />
+                    </ul>
+                </div>
             </main>
-            
+
         </>
     )
 }
