@@ -5,6 +5,7 @@ export default function Header() {
 
     const [menuIsOpen, setMenuIsOpen] = useState(false)
 
+    // altera menuIsOpen entre verdadeiro e falso
     function openMenu() {
         if (menuIsOpen === false) {
             setMenuIsOpen(true)
@@ -60,7 +61,9 @@ export default function Header() {
                         </svg>
                     </Link>
 
+                    {/* se menuIsOpen for true mostra o icone X se não mostra as 3 listras  */}
                     {menuIsOpen ?
+                        // ao clicar chama a função openMune
                         <svg onClick={openMenu} className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                         </svg>
@@ -71,7 +74,8 @@ export default function Header() {
                     }
                 </div>
             </div>
-
+            
+            {/* se for true mostra o menu, se for false mostra nada */}
             {menuIsOpen ?
                 <>
                     <hr className="h-px w-full" />

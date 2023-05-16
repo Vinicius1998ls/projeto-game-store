@@ -1,5 +1,6 @@
 export default function Classifler(value, list) {
 
+    // ordena a lista onforme o valor recebido
     if (value === 'relevance') {
         list.sort((a, b) => b.relevance - a.relevance);
     } else if (value === 'lowest') {
