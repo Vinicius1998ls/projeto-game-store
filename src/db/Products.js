@@ -4,67 +4,78 @@ export function consolesList() {
         name: 'Xbox series S 512Gb',
         price: 2299.99,
         img: '../imgs/Xbox_series_s.png',
-        relevance: 5
+        relevance: 5,
+        branch: 'xbox'
       },
       { id: 2,
         name: 'Xbox series X 1Tb',
         price: 4699.99,
         img: '../imgs/Xbox_series_x.jpg',
-        relevance: 4
+        relevance: 4,
+        branch: 'xbox'
       },
       { id: 4,
         name: 'Playstation 5 Edição digital 825Gb',
         price: 3799.99,
         img: '../imgs/PS5_digital.jpg',
-        relevance: 5 
+        relevance: 5,
+        branch: 'playstation' 
       },
       { id: 5,
         name: 'Playstation 5 825Gb',
         price: 3999.99,
         img: '../imgs/PS5.jpg',
-        relevance: 4
+        relevance: 4,
+        branch: 'playstation'
       },
       { id: 6,
         name: 'Xbox one S 500Gb',
         price: 1799.99,
         img: '../imgs/Xbox_one_s.jpg',
-        relevance: 3
+        relevance: 3,
+        branch: 'xbox'
       },
       { id: 7,
         name: 'Xbox one X 1Tb',
         price: 2499.99,
         img: '../imgs/Xbox_one_x.jpg',
-        relevance: 2
+        relevance: 2,
+        branch: 'xbox'
       },
       { id: 8,
         name: 'Playstation 4 slim 500Gb',
         price: 1999.99,
         img: '../imgs/PS4_slim.jpg',
-        relevance: 3
+        relevance: 3,
+        branch: 'playstation'
       },
       { id: 9,
         name: 'Playstation 4 PRO 1Tb',
         price: 2999.99,
         img: '../imgs/PS4_pro.jpg',
-        relevance: 2
+        relevance: 2,
+        branch: 'playstation'
       },
       { id: 10,
         name: 'Nintendo Switch OLED 64Gb Standard',
         price: 2299.99,
         img: '../imgs/Nintendo_switch_oled.jpg',
-        relevance: 3
+        relevance: 3,
+        branch: 'nintendo'
       },
       { id: 11,
         name: 'Nintendo Switch 32Gb Standard',
         price: 2099.99,
         img: '../imgs/Nintendo_switch.jpg',
-        relevance: 4
+        relevance: 4,
+        branch: 'nintendo'
       },
       { id: 12,
         name: 'Nintendo Switch Lite 32Gb Standard',
         price: 1399.99,
         img: '../imgs/Nintendo_switch_lite.jpg',
-        relevance: 1
+        relevance: 1,
+        branch: 'nintendo'
       }
     ];
   

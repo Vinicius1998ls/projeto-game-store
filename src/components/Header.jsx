@@ -78,14 +78,15 @@ export default function Header() {
             {/* se for true mostra o menu, se for false mostra nada */}
             {menuIsOpen ?
                 <>
-                    <hr className="h-px w-full" />
-                    <div className="absolute w-screen h-full bg-blue-500 z-10">
-                        <ul className="flex flex-col mr-5 mt-1">
-                            <li className="flex justify-end mt-3"><Link className='menu-font' href="./">Home</Link></li>
-                            <li className="flex justify-end"><Link className='menu-font' href="Consoles">Consoles</Link></li>
-                            <li className="flex justify-end"><Link className='menu-font' href="Games">Jogos</Link></li>
-                            <li className="flex justify-end"><Link className='menu-font' href="GiftCard">Gift card</Link></li>
-                        </ul>
+                    <div className="absolute w-screen h-fit z-40">                    
+                        <div className="flex justify-end mt-px">                            
+                            <ul className="flex flex-col w-36 bg-blue-500 ">
+                                <li className="flex justify-end mr-5"><Link className='menu-font' href="./">Home</Link></li>
+                                <li className="flex justify-end mr-5"><Link className='menu-font' href="Consoles">Consoles</Link></li>
+                                <li className="flex justify-end mr-5"><Link className='menu-font' href="Games">Jogos</Link></li>
+                                <li className="flex justify-end mr-5 mb-3"><Link className='menu-font' href="GiftCard">Gift card</Link></li>
+                            </ul>
+                        </div>                        
                     </div>
                 </>
                 :
