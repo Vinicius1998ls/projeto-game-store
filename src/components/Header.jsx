@@ -1,8 +1,13 @@
 import Link from "next/link"
 import { useState } from "react"
 
-export default function Header() {
+export default function Header(props) {
 
+    const homePath = props.home
+    const consolesPath = props.consoles
+    const gamesPath = props.games
+    const giftPath = props.gift
+    
     const [menuIsOpen, setMenuIsOpen] = useState(false)
 
     // altera menuIsOpen entre verdadeiro e falso
@@ -18,14 +23,14 @@ export default function Header() {
         <>
             <div className="hidden lg:flex justify-around items-center bg-blue-500 h-20">
 
-                <Link className="h-14" href="./">
+                <Link className="h-14" href={homePath}>
                     <img className="h-full" src="../GGS_logo.png" alt="Logo" />
                 </Link>
 
                 <nav className="w-1/2 flex justify-around items-center">
-                    <Link className='navbar-font' href="Consoles">Consoles</Link>
-                    <Link className='navbar-font' href="Games">Jogos</Link>
-                    <Link className='navbar-font' href="GiftCard">Gift card</Link>
+                    <Link className='navbar-font' href={consolesPath}>Consoles</Link>
+                    <Link className='navbar-font' href={gamesPath}>Jogos</Link>
+                    <Link className='navbar-font' href={giftPath}>Gift card</Link>
                     <div className="flex bg-white xl:w-80 h-8 rounded-full md:w-64">
                         <input placeholder="Procurar..." className="p-1 m-1 ml-2 w-full focus:outline-none" type="text" />
                         <svg className="m-1 mr-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -45,7 +50,7 @@ export default function Header() {
             {/* Mobile */}
             <div className="flex lg:hidden justify-between items-center bg-blue-500 h-20 px-5 sm:px-10">
 
-                <Link className="h-10 sm:h-14" href="./">
+                <Link className="h-10 sm:h-14" href={homePath}>
                     <img className="h-full" src="../GGS_logo.png" alt="Logo" />
                 </Link>
 
@@ -81,10 +86,10 @@ export default function Header() {
                     <div className="absolute w-screen h-fit z-40">                    
                         <div className="flex justify-end mt-px">                            
                             <ul className="flex flex-col w-36 bg-blue-500 ">
-                                <li className="flex justify-end mr-5"><Link className='menu-font' href="./">Home</Link></li>
-                                <li className="flex justify-end mr-5"><Link className='menu-font' href="Consoles">Consoles</Link></li>
-                                <li className="flex justify-end mr-5"><Link className='menu-font' href="Games">Jogos</Link></li>
-                                <li className="flex justify-end mr-5 mb-3"><Link className='menu-font' href="GiftCard">Gift card</Link></li>
+                                <li className="flex justify-end mr-5"><Link className='menu-font' href={homePath}>Home</Link></li>
+                                <li className="flex justify-end mr-5"><Link className='menu-font' href={consolesPath}>Consoles</Link></li>
+                                <li className="flex justify-end mr-5"><Link className='menu-font' href={gamesPath}>Jogos</Link></li>
+                                <li className="flex justify-end mr-5 mb-3"><Link className='menu-font' href={giftPath}>Gift card</Link></li>
                             </ul>
                         </div>                        
                     </div>

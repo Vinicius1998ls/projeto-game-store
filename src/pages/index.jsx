@@ -6,7 +6,7 @@ import Footer from "@/components/Footer"
 export default function Home() {
     return (
         <>
-            <Header></Header>
+            <Header home='./' consoles='/Consoles' games='Games' gift='GiftCard'></Header>
             <Carousel></Carousel>
             {/* temporario */}
             <div className="w-full h-80"></div>

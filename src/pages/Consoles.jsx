@@ -71,7 +71,7 @@ export default function Consoles() {
                 :
                 null
             }
-            <Header></Header>
+            <Header home='./' consoles='/Consoles' games='Games' gift='GiftCard' ></Header>
             <main className="flex flex-col items-center">
 
                 <div className="w-10/12 mt-5 justify-end min-[400px]:w-9/12 lg:max-w-5xl">
