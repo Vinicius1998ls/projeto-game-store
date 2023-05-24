@@ -35,7 +35,9 @@ export function consolesList() {
         img: '../imgs/Xbox_series_x.jpg',
         relevance: 4,
         branch: 'xbox',
-        productPage: 'products/xbox_series_s'
+        gallery: [
+          '../imgs/Xbox_series_x2.jpg',
+        ]
       },
       { id: 4,
         name: 'Playstation 5 Edição digital 825Gb',

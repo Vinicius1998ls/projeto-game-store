@@ -13,15 +13,15 @@ import "swiper/css/navigation";
 import { Zoom, Pagination, Navigation } from "swiper";
 
 
-
 // altera entre falso e verdadeiro o estado de showMore
-function handleShowMore() {
+function handleShowMore(showMore, setShowMore) {
     setShowMore(!showMore)
 }
 
+
 export default function ProductPage() {  
     // cria um estado para mostrar a descrição e ocultar
-    const [showMore, setShowMore] = useState(false) 
+    const [showMore, setShowMore] = useState(false)    
 
     const router = useRouter()
 
@@ -61,8 +61,7 @@ export default function ProductPage() {
                 <SwiperSlide>
                         <p className="mt-10">Produto sem imagens...</p>                    
                 </SwiperSlide>
-            )
-            
+            )            
         }
     }
 
@@ -142,14 +141,14 @@ export default function ProductPage() {
                             {/* mostra o botão conforme o estado de showMore */}
                             {showMore ?
                             // clicar no no botão altera o estado oque faz com que altere o botão
-                            <button className="flex flex-col items-center w-36 bg-orange-600 font-button-buy text-white p-1 mt-3 rounded-lg" onClick={handleShowMore}>
+                            <button className="flex flex-col items-center w-36 bg-orange-600 font-button-buy text-white p-1 mt-3 rounded-lg" onClick={() => handleShowMore(showMore, setShowMore)}>
                                 <svg className="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
                                 </svg>   
                                 Mostrar menos
                             </button>
                             :
-                            <button className="flex flex-col items-center w-36 bg-orange-600 font-button-buy text-white p-1 mt-3 rounded-lg" onClick={handleShowMore}>
+                            <button className="flex flex-col items-center w-36 bg-orange-600 font-button-buy text-white p-1 mt-3 rounded-lg" onClick={() => handleShowMore(showMore, setShowMore)}>
                                 Mostrar mais
                                 <svg className="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" >
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
