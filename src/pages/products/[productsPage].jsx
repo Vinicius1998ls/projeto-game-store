@@ -130,7 +130,7 @@ export default function ProductPage() {
                             </>
                             :
                             <div>
-                                <span className="absolute w-full h-24 z-30 bg-gradient-to-b from-white/10 to-white/40"></span>
+                                <span className="absolute w-11/12 lg:max-w-4xl h-24 z-30 bg-gradient-to-b from-white/10 to-white/40"></span>
                                 <div className="w-full h-24 overflow-hidden line-clamp-4 z-10">                                
                                     {productItem.cutDescription ? productItem.cutDescription : 'Sem descrição'}                                
                                 </div>
