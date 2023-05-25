@@ -36,8 +36,12 @@ export function consolesList() {
         relevance: 4,
         branch: 'xbox',
         gallery: [
+          '../imgs/Xbox_series_x1.png',
           '../imgs/Xbox_series_x2.jpg',
-        ]
+          '../imgs/Xbox_series_x3.jpg',
+        ],
+        cutDescription: <p className="title-item">Console Xbox Series X - MicrosoftO Xbox Series X é um dos dois sucessores dos consoles de nova geração da Microsoft, que traz consigo um poder de processamento avantajado unido à uma biblioteca de jogos retrocompatíveis que quebra paradigmas. Dentre suas inúmeras inovações, a principal dela é o carregamento através de SSDs Solid State Drives , que permite minimizar o tempo de carregamento de todos os processos dentro do console, eliminando para sempre telas de loading e horas de instalação. Desfrute da fluidez de taxas de quadros a 120 Hz e resoluções que atingem até 8K, e maximize sua experiência neste console que fez história. A versão Series S não acompanha leitor de discos blu-ray, e portanto é ideal para jogadores que tem preferência por uma biblioteca completamente online, com o acesso aos jogos no lançamento muito mais rápido, e ocupando menos espaço físico.Power your dreams Apresentamos o Xbox Series X, nosso console mais rápido e poderoso de todos os tempos, projetado para uma geração de consoles que giram em torno de você, o jogador.O Xbox mais poderoso de todos: Explore novos mundos e desfrute da ação como nunca antes com 12 teraflops incomparáveis de poder de processamento gráfico.Conheça o novo controle sem fio Xbox: Experimente o design modernizado do controle sem fio, criado para melhorar o conforto durante os jogos. Mantenha-se focado com o gatilho texturizado, capture e compartilhe conteúdo de forma simplificada.ITENS INCLUSOS:01 - Console Xbox Series X01 - Controle Wireless Microsoft01 - Cabo HDMI</p>,
+        completeDescription: <p className="title-item">Console Xbox Series X - MicrosoftO Xbox Series X é um dos dois sucessores dos consoles de nova geração da Microsoft, que traz consigo um poder de processamento avantajado unido à uma biblioteca de jogos retrocompatíveis que quebra paradigmas. Dentre suas inúmeras inovações, a principal dela é o carregamento através de SSDs Solid State Drives , que permite minimizar o tempo de carregamento de todos os processos dentro do console, eliminando para sempre telas de loading e horas de instalação. Desfrute da fluidez de taxas de quadros a 120 Hz e resoluções que atingem até 8K, e maximize sua experiência neste console que fez história. A versão Series S não acompanha leitor de discos blu-ray, e portanto é ideal para jogadores que tem preferência por uma biblioteca completamente online, com o acesso aos jogos no lançamento muito mais rápido, e ocupando menos espaço físico.Power your dreams Apresentamos o Xbox Series X, nosso console mais rápido e poderoso de todos os tempos, projetado para uma geração de consoles que giram em torno de você, o jogador.O Xbox mais poderoso de todos: Explore novos mundos e desfrute da ação como nunca antes com 12 teraflops incomparáveis de poder de processamento gráfico.Conheça o novo controle sem fio Xbox: Experimente o design modernizado do controle sem fio, criado para melhorar o conforto durante os jogos. Mantenha-se focado com o gatilho texturizado, capture e compartilhe conteúdo de forma simplificada.ITENS INCLUSOS:01 - Console Xbox Series X01 - Controle Wireless Microsoft01 - Cabo HDMI</p>
       },
       { id: 4,
         name: 'Playstation 5 Edição digital 825Gb',
@@ -45,7 +49,19 @@ export function consolesList() {
         img: '../imgs/PS5_digital.jpg',
         relevance: 5,
         branch: 'playstation',
-        productPage: 'products/PS5_digital' 
+        productPage: 'products/PS5_digital',
+        gallery: [
+          '../imgs/PS5_digital2.jpg',
+          '../imgs/PS5_digital3.jpg',
+        ],
+        cutDescription: <p className="title-item">Uma versão totalmente digital do console PS5 sem unidade de disco. Faça login na sua conta da PlayStation Network e acesse a PlayStation Store para baixar jogos digitais para PS5 e PS4. Experimente o carregamento extremamente rápido do SSD de ultra-velocidade, uma imersão mais profunda com suporte à resposta tátil, gatilhos adaptáveis e áudio 3D. Além de uma geração totalmente nova de jogos incríveis PlayStation®.</p>,
+        completeDescription:<div>
+        <p className="title-item">Uma versão totalmente digital do console PS5 sem unidade de disco. Faça login na sua conta da PlayStation Network e acesse a PlayStation Store para baixar jogos digitais para PS5 e PS4. Experimente o carregamento extremamente rápido do SSD de ultra-velocidade, uma imersão mais profunda com suporte à resposta tátil, gatilhos adaptáveis e áudio 3D. Além de uma geração totalmente nova de jogos incríveis PlayStation®.</p>
+        <br></br>
+        <p className="title-item">Domine o poder de uma CPU e GPU personalizadas e o SSD com E/S integradas que redefinem as regras do que o console Playstation pode fazer. Maximize suas sessões de jogo com tempos de carregamento praticamente instantâneos para jogos do PS5 instalados. A integração personalizada dos sistemas de console PS5 permite que os criadores extraiam dados do SSD tão rápido que eles podem desenvolver jogos de formas que antes seriam impossíveis.</p>
+        <br></br>
+        <p className="title-item">O Controle Sem Fio DualSense para PS5 oferece feedback tátil imersivo, gatilhos dinâmicos e adaptáveis e um microfone integrado, tudo isso em um design icônico. Desfrute de feedback tátil em jogos específicos do PS5 e sinta o impacto de suas ações no jogo graças ao feedback sensorial dinâmico. Assuma o controle com os gatilhos adaptáveis e imersivos, agora com níveis dinâmicos de resistência que simulam o impacto físico das atividades em jogos específicos do PS5.</p>
+        </div> 
       },
       { id: 5,
         name: 'Playstation 5 825Gb',
@@ -53,7 +69,32 @@ export function consolesList() {
         img: '../imgs/PS5.jpg',
         relevance: 4,
         branch: 'playstation',
-        productPage: 'products/xbox_series_s'
+        gallery: [
+          '../imgs/PS5_2.png',
+          '../imgs/PS5_3.jpg',
+        ],
+        cutDescription:<div>
+          <p className="title-item">Com seu console PlayStation 5 você terá entretenimento garantido todos os dias. Sua tecnologia foi criada para colocar novos desafios para jogadores novatos e especialistas.</p>
+          <br></br>
+          <p className="title-item">O PlayStation renovou as expectativas do mundo virtual com este novo console e seu grande desempenho. Tem uma interface de usuário mais rápida e fácil de navegar do que os modelos anteriores. Além disso, você poderá jogar por horas desafiando milhões de oponentes em todo o mundo que estão esperando por novos desafios.</p>
+          </div>,
+        completeDescription:<div>
+          <p className="title-item">Com seu console PlayStation 5 você terá entretenimento garantido todos os dias. Sua tecnologia foi criada para colocar novos desafios para jogadores novatos e especialistas.</p>
+          <br></br>
+          <p className="title-item">O PlayStation renovou as expectativas do mundo virtual com este novo console e seu grande desempenho. Tem uma interface de usuário mais rápida e fácil de navegar do que os modelos anteriores. Além disso, você poderá jogar por horas desafiando milhões de oponentes em todo o mundo que estão esperando por novos desafios.</p>
+          <br></br>
+          <p className="title-item">Qualidade de outro nível</p>
+          <p>Este console é considerado o melhor do mercado, já que tem uma resolução de até 4K.</p>
+          <br></br>
+          <p className="title-item">Além disso, o controle DualSense para PS5 combina estilo e tecnologia para tornar o jogo mais confortável e interativo para todos os seus jogadores.</p>
+          <br></br>
+          <p className="title-item">Adaptado às suas necessidades</p>
+          <p className="title-item">Salve as suas aplicações, fotos, vídeos e muito mais no disco rígido, que tem uma capacidade de 825 GB.
+          Por ter um processador de 8 núcleos e um gráfico, fornecem uma experiência dinâmica, respostas ágeis e transições suaves de imagens de alta definição.
+          Por outro lado, tem uma porta USB e saída HDMI, que permitem conectar acessórios e carregar a bateria do controle enquanto você joga.</p>
+          <br></br>
+          <p className="title-item">Você poderá reproduzir música, assistir seus filmes e séries favoritos através dos aplicativos para download.</p>
+        </div>
       },
       { id: 6,
         name: 'Xbox one S 500Gb',
@@ -61,7 +102,31 @@ export function consolesList() {
         img: '../imgs/Xbox_one_s.jpg',
         relevance: 3,
         branch: 'xbox',
-        productPage: 'products/xbox_series_s'
+        gallery: [
+          '../imgs/Xbox_one_s3.jpg',
+          '../imgs/Xbox_one_s4.jpg',
+          '../imgs/Xbox_one_s2.jpg',
+        ],
+        cutDescription: <p className="title-item">Com seu console Xbox One você terá entretenimento garantido todos os dias. Sua tecnologia foi criada para colocar novos desafios para jogadores novatos e especialistas.
+        <br></br>
+        Com mais de 40 milhões de unidades vendidas em todo o mundo, o Xbox One foi uma sensação para a última década. Com este console você será capaz de desafiar suas habilidades com jogos incríveis e desfrutar do melhor conteúdo on-line por horas.</p>,
+        completeDescription: <div>
+        <p className="title-item">Com seu console Xbox One você terá entretenimento garantido todos os dias. Sua tecnologia foi criada para colocar novos desafios para jogadores novatos e especialistas.
+        <br></br>
+        Com mais de 40 milhões de unidades vendidas em todo o mundo, o Xbox One foi uma sensação para a última década. Com este console você será capaz de desafiar suas habilidades com jogos incríveis e desfrutar do melhor conteúdo on-line por horas.
+        <br></br>
+        Qualidade de outro nível
+        Este console é considerado o melhor do mercado, já que tem uma resolução de até 4K.
+        <br></br>
+        O Microsoft Xbox One S oferece gráficos impressionantes, som de primeira linha e até mesmo a capacidade de salvar todos os seus jogos na nuvem.
+        <br></br>
+        Adaptado às suas necessidades
+        Salve as suas aplicações, fotos, vídeos e muito mais no disco rígido, que tem uma capacidade de 500Gb.
+        Por ter um processador de 8 núcleos e um gráfico, fornecem uma experiência dinâmica, respostas ágeis e transições suaves de imagens de alta definição.
+        Por outro lado, tem uma porta USB e saída HDMI, que permitem conectar acessórios e carregar a bateria do controle enquanto você joga.
+        <br></br>
+        Você poderá reproduzir música, assistir seus filmes e séries favoritos através dos aplicativos para download.</p>
+        </div>
       },
       { id: 7,
         name: 'Xbox one X 1Tb',
@@ -69,7 +134,28 @@ export function consolesList() {
         img: '../imgs/Xbox_one_x.jpg',
         relevance: 2,
         branch: 'xbox',
-        productPage: 'products/xbox_series_s'
+        gallery: [
+          '../imgs/Xbox_one_x3.jpg',
+          '../imgs/Xbox_one_x2.jpg',
+        ],
+        cutDescription:<p>Com seu console Xbox One você terá entretenimento garantido todos os dias. Sua tecnologia foi criada para colocar novos desafios para jogadores novatos e especialistas.
+        <br></br>
+        Com mais de 40 milhões de unidades vendidas em todo o mundo, o Xbox One foi uma sensação para a última década. Com este console você será capaz de desafiar suas habilidades com jogos incríveis e desfrutar do melhor conteúdo on-line por horas.</p>,
+        completeDescription: <p>Com seu console Xbox One você terá entretenimento garantido todos os dias. Sua tecnologia foi criada para colocar novos desafios para jogadores novatos e especialistas.
+        <br></br>
+        Com mais de 40 milhões de unidades vendidas em todo o mundo, o Xbox One foi uma sensação para a última década. Com este console você será capaz de desafiar suas habilidades com jogos incríveis e desfrutar do melhor conteúdo on-line por horas.
+        <br></br>
+        Qualidade de outro nível
+        Este console é considerado o melhor do mercado, já que tem uma resolução de até 4K.
+        <br></br>
+        Adaptado às suas necessidades
+        Salve as suas aplicações, fotos, vídeos e muito mais no disco rígido, que tem uma capacidade de 1 TB.
+        Por ter um processador de 8 núcleos e um gráfico, fornecem uma experiência dinâmica, respostas ágeis e transições suaves de imagens de alta definição.
+        Por outro lado, tem uma porta USB e saída HDMI, que permitem conectar acessórios e carregar a bateria do controle enquanto você joga.
+        <br></br>
+        Você poderá reproduzir música, assistir seus filmes e séries favoritos através dos aplicativos para download.
+        </p>
+        
       },
       { id: 8,
         name: 'Playstation 4 slim 500Gb',
@@ -77,7 +163,9 @@ export function consolesList() {
         img: '../imgs/PS4_slim.jpg',
         relevance: 3,
         branch: 'playstation',
-        productPage: 'products/xbox_series_s'
+        gallery: [
+          '../imgs/PS4_slim3.jpeg',
+        ]
       },
       { id: 9,
         name: 'Playstation 4 PRO 1Tb',
@@ -85,7 +173,9 @@ export function consolesList() {
         img: '../imgs/PS4_pro.jpg',
         relevance: 2,
         branch: 'playstation',
-        productPage: 'products/xbox_series_s'
+        gallery: [
+          '../imgs/PS4_pro2.jpg',
+        ]
       },
       { id: 10,
         name: 'Nintendo Switch OLED 64Gb Standard',
@@ -93,7 +183,9 @@ export function consolesList() {
         img: '../imgs/Nintendo_switch_oled.jpg',
         relevance: 3,
         branch: 'nintendo',
-        productPage: 'products/xbox_series_s'
+        gallery: [
+          '../imgs/Nintendo_switch_oled2.jpg',
+        ]
       },
       { id: 11,
         name: 'Nintendo Switch 32Gb Standard',
@@ -101,7 +193,10 @@ export function consolesList() {
         img: '../imgs/Nintendo_switch.jpg',
         relevance: 4,
         branch: 'nintendo',
-        productPage: 'products/xbox_series_s'
+        gallery: [
+          '../imgs/Nintendo_switch2.jpg',
+        ]
+        
       },
       { id: 12,
         name: 'Nintendo Switch Lite 32Gb Standard',
@@ -109,7 +204,9 @@ export function consolesList() {
         img: '../imgs/Nintendo_switch_lite.jpg',
         relevance: 1,
         branch: 'nintendo',
-        productPage: 'products/xbox_series_s'
+        gallery: [
+          '../imgs/Nintendo_switch_lite2.jpg'
+        ]
       }
     ];
   

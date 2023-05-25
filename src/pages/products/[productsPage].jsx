@@ -124,10 +124,10 @@ export default function ProductPage() {
                         <h2 className="title-item font-medium text-lg">Descrição:</h2>
                         {/* conforme o valor de showMore é mostrado ou a descrição cortada ou a completa */}
                         {showMore ?
-                            <>
+                            <div>
                                 {/* se o item não houver descrição é mostrado o texto sem descrição */}
-                                {productItem.completeDescription ? productItem.completeDescription : 'Sem descrição'}
-                            </>
+                                {productItem.completeDescription ? productItem.completeDescription : <p className="h-24">Sem descrição</p>}
+                            </div>
                             :
                             <div>
                                 <span className="absolute w-11/12 lg:max-w-4xl h-24 z-30 bg-gradient-to-b from-white/10 to-white/40"></span>

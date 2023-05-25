@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Footer() {
 
     return (
-        <footer className="static bottom-0 w-full h-24 min-[333px]:h-20 bg-gray-800 text-white font-classifler-option ">
+        <footer className="static bottom-0 w-full h-24 min-[333px]:h-20 mt-10 bg-gray-800 text-white font-classifler-option ">
             <div className="flex flex-col items-center h-full justify-center">
                 <p className="">Este site é um objeto de estudo</p>
                 <p>Desenvolvido por Vinicius Schuster</p>
