@@ -32,21 +32,32 @@ export function Pagination(props) {
     const list = props.list
     const classifler = props.classifler
     const filter = props.filter
+    const currentPage = parseInt(props.currentPage)
     
     const pages = CreatePages(list)
-
+    
     function createPages() {
         let pager = []        
-                    
+        
         for(let i = 1; i <= pages.length - 1; i++) {
             // cria o paginador com o link que é gerado conforme os parametros recebidos
-            pager[i] = <li key={i} className="flex justify-center items-center h-6 w-6 font-button-buy text-base p-1 m-1 rounded-full bg-blue-500 text-black hover:bg-orange-500 hover:text-white">
-                                <Link href={{ pathname: `../consoles/${i}`, 
-                                        query: { 
-                                            classifler: `${classifler}`, 
-                                            filter: `${filter}` 
-                                } }}><span className="p-2">{i}</span></Link>
-                            </li>
+            if(i === currentPage) {
+                pager[i] = <li key={i} className="flex justify-center items-center h-6 w-6 font-button-buy text-base p-1 m-1 rounded-full bg-orange-500 text-white">
+                                    <Link href={{ pathname: `../consoles/${i}`, 
+                                            query: { 
+                                                classifler: `${classifler}`, 
+                                                filter: `${filter}` 
+                                    } }}><span className="p-2">{i}</span></Link>
+                                </li>
+            } else {
+                pager[i] = <li key={i} className="flex justify-center items-center h-6 w-6 font-button-buy text-base p-1 m-1 rounded-full bg-blue-500 text-black hover:bg-orange-500 hover:text-white">
+                                    <Link href={{ pathname: `../consoles/${i}`, 
+                                            query: { 
+                                                classifler: `${classifler}`, 
+                                                filter: `${filter}` 
+                                    } }}><span className="p-2">{i}</span></Link>
+                                </li>
+            }
         }
 
         return pager    

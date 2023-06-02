@@ -172,7 +172,7 @@ export default function ProductsList(props) {
                 </div>
             </div>
 
-            <div className="flex justify-center mt-6 z-10 min-h-[80vh]">
+            <div className="flex justify-center mt-6 z-10 min-h-[70vh]">
                 <ul className="flex flex-row flex-wrap justify-center mt-5 max-w-6xl">
                     {/* renderiza a lista conforme o array de paginas, currentPages indica qula pagina */}
                     <CreateList list={itemsPerPage[props.currentPage]} />
@@ -181,7 +181,7 @@ export default function ProductsList(props) {
             </div>
             
             {/* cria a paginação passando parametros para criar as paginas seguintes */}
-            <Pagination list={list} classifler={currentClassifler} filter={isChecked}></Pagination>
+            <Pagination list={list} classifler={currentClassifler} filter={isChecked} currentPage={props.currentPage}></Pagination>
         </>
     )
 }
