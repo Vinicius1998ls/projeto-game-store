@@ -67,7 +67,7 @@ export default function ProductPage() {
 
     return (
         <>
-            <Header home='.././' consoles='../Consoles' games='../Games' gift='../GiftCard' ></Header>
+            <Header home='.././' consoles='../consoles' games='../Games' gift='../GiftCard' ></Header>
             <main className="flex justify-center">
                 <div className="flex flex-col items-center w-11/12 ">
 

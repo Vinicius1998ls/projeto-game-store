@@ -6,10 +6,10 @@ import Footer from "@/components/Footer"
 export default function Home() {
     return (
         <>
-            <Header home='./' consoles='/Consoles' games='Games' gift='GiftCard'></Header>
-            <Carousel></Carousel>
-            {/* temporario */}
-            <div className="w-full h-80"></div>
+            <Header home='./' consoles='consoles' games='Games' gift='GiftCard'></Header>
+            <main className="min-h-[80vh]">
+                <Carousel></Carousel>
+            </main>
             <Footer></Footer>
         </>
     )
