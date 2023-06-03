@@ -1,11 +1,11 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProductsList from "@/components/ProductsList";
-import { consolesList } from "@/db/Products";
+import { gamesList } from "@/db/Products";
 
-const items = consolesList()
+const items = gamesList()
 
-export default function Consoles() {
+export default function Games() {
 
 
     return(
@@ -18,7 +18,7 @@ export default function Consoles() {
                     currentPage={1} 
                     classifler={'relevance'}
                     filter={[true, true, true]}
-                    path={'consoles'}>
+                    path={'games'}>
                 </ProductsList>                
             </main>
             <Footer></Footer>

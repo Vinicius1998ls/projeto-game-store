@@ -1,11 +1,11 @@
 import { useRouter } from "next/router";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import { consolesList } from "@/db/Products";
+import { gamesList } from "@/db/Products";
 import ProductsList from "@/components/ProductsList";
 
 
-export default function ConsolesPages() {
+export default function GamesPages() {
     
     const router = useRouter()
     
@@ -14,7 +14,7 @@ export default function ConsolesPages() {
         return <div>Carregando...</div>
     }
 
-    const items = consolesList()
+    const items = gamesList()
     // extrai as informações recebidas pelo link
     const classifler = router.query.classifler
     // como os valores de filter vem em string aqui é transformado em Boolean
@@ -28,12 +28,12 @@ export default function ConsolesPages() {
             return item
         }
     })
-    const currentPage = router.query.consolesPage
+    const currentPage = router.query.gamesPage
     const path = router.query.path
 
     return (
         <>
-            <Header home='.././' consoles='../consoles' games='../games' gift='../GiftCard' ></Header>
+            <Header home='.././' consoles='../consoles' games='../Games' gift='../GiftCard' ></Header>
             <main className="flex flex-col items-center">
                 {/* gera a lista conforme parametros */}
                 <ProductsList 

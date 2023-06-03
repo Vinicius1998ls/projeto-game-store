@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useRouter } from "next/router"
-import { consolesList } from '../../db/Products.js'
+import { consolesList, gamesList } from '../../db/Products.js'
 import Header from "@/components/Header.jsx"
 import Footer from "@/components/Footer.jsx";
 
@@ -29,11 +29,14 @@ export default function ProductPage() {
     if (!router.query || Object.keys(router.query).length === 0) {
         return <div>Carregando...</div>
     }
+    
 
     // recebe o valor da url
     const id = parseInt(router.query.productsPage)
-    // recebe a lista de consoles
-    const products = consolesList()
+    // extrai todos os itens de db
+    const consoles = consolesList()
+    const games = gamesList()
+    const products = consoles.concat(games)
     // filtra procurando na lista o item com mesmo id
     const productItem = products.find(product => product.id === id)    
 
@@ -41,12 +44,12 @@ export default function ProductPage() {
     function createGallery() {    
         
         // se as duas condições forem verdadeiras cria a galeria
-        if(productItem.gallery !== undefined && productItem.gallery.length !== 0) {
+        if(productItem.gallery !== undefined && productItem.gallery.length !== 0) {            
             // faz o mapeamento
-            return (productItem.gallery.map(item => {
+            return (productItem.gallery.map((item, index) => {                
                 return (
                     // para cada item é criado um slide com a imagem
-                    <SwiperSlide key={productItem.gallery.index} className="flex justify-center">
+                    <SwiperSlide key={index} className="flex justify-center">                        
                         <div className="swiper-zoom-container">
                             {/* product.gallery contem um array, cada item do array é 
                             um caminho para imagem que é passado para src */}
@@ -67,7 +70,7 @@ export default function ProductPage() {
 
     return (
         <>
-            <Header home='.././' consoles='../consoles' games='../Games' gift='../GiftCard' ></Header>
+            <Header home='.././' consoles='../consoles' games='../games' gift='../GiftCard' ></Header>
             <main className="flex justify-center">
                 <div className="flex flex-col items-center w-11/12 ">
 

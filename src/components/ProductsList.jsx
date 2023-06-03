@@ -5,7 +5,7 @@ import CreateList from "./CreateList"
 import Classifler from "./Classifler"
 import Filter from "./Filter"
 import { Pagination, itemsPage } from "./CreatePages"
-import { consolesList } from "@/db/Products"
+import { consolesList, gamesList } from "@/db/Products"
 
 
 export default function ProductsList(props) {
@@ -13,27 +13,27 @@ export default function ProductsList(props) {
     const router = useRouter()
 
     // recebe a lista e classifica
-    const items = consolesList()
+    // const items = consolesList()
 
     // guarda os parametros
     const oldList = props.list
     const oldClassifler = props.classifler
     const oldFilter = props.filter
+    const currentPage = props.currentPage
+    const path = props.path
 
-    //cria a lista conforme os parametros recebidos
-    function firtsOrganization(oldList, oldClassifler, oldFilter) {
-
-        const list = Filter(oldFilter, oldList, oldClassifler)
-
-        return list
-    }
     
-    // guarda o ordenador atual para usar em Filter.jsx
-    const [currentClassifler, setCurrentClassifler] = useState(props.classifler)
-
-    // cria um estado para list que recebe os itens retornados da função,
+    // cria um estado para list que recebe os itens retornados de Filter,
     // esses itens já vem organizados e filtrados conforme recebido os parametros via props
-    const [list, setList] = useState(firtsOrganization(oldList, oldClassifler, oldFilter))
+    const [list, setList] = useState(Filter(oldFilter, oldList, oldClassifler))
+
+    // divide a lista em paginas|retorna um array de arrays, cada um representa 1 pagina
+    const itemsPerPage = itemsPage(list)
+
+    // =====Ordenar=====
+    // guarda o ordenador atual para usar em Filter.jsx
+    const [currentClassifler, setCurrentClassifler] = useState(oldClassifler)
+
     // função para alterar a lista
     function handleList(value, list) {
         // passa list para newList para permitir alteração
@@ -50,11 +50,8 @@ export default function ProductsList(props) {
 
 
     // =====filtrar=====
-    // recebe o array via props indicando quais estão marcadas conforme true ou false 
-    const branchsChecked = props.filter
-    
-    // cria o estado com o array branchsChecked indicando true nas três posições
-    const [isChecked, setIsChecked] = useState(branchsChecked)
+    // recebe o array via props indicando quais estão marcadas conforme true ou false
+    const [isChecked, setIsChecked] = useState(oldFilter)
 
     //altera o estado, marcando e desmarcando o checkbox
     function handleCheck(index) {
@@ -63,16 +60,30 @@ export default function ProductsList(props) {
         checkedList[index] = !checkedList[index]
         //atualiza a isChecked
         setIsChecked(checkedList)
-        //filtra a lista               
+        let items = getProducts(path)        
+        //filtra a lista              
         setList(Filter(checkedList, items, currentClassifler))
         // após filtrar reencaminha para a primeira pagina com os filtros
+        console.log('productslist:', path)
         router.push({
-            pathname: `../consoles/${1}`, 
+            pathname: `../${path}/${1}`, 
             query: { 
                 classifler: `${currentClassifler}`, 
-                filter: `${checkedList}`
+                filter: `${checkedList}`,
+                path:`${path}`
             }
         })
+    }
+
+    function getProducts(path) {
+        // console.log(path)
+        let items = []
+            if(path === 'consoles') {
+                items = consolesList()
+            } else {
+                items = gamesList()
+            }
+        return items
     }
 
     const [filterOpen, setFilterOpen] = useState(false)
@@ -84,9 +95,6 @@ export default function ProductsList(props) {
             setFilterOpen(false)
         }
     }
-    
-    // retorna um array de arrays, cada um representa 1 pagina
-    const itemsPerPage = itemsPage(list)
     
 
     return (
@@ -175,13 +183,18 @@ export default function ProductsList(props) {
             <div className="flex justify-center mt-6 z-10 min-h-[70vh]">
                 <ul className="flex flex-row flex-wrap justify-center mt-5 max-w-6xl">
                     {/* renderiza a lista conforme o array de paginas, currentPages indica qula pagina */}
-                    <CreateList list={itemsPerPage[props.currentPage]} />
-                    {/* <CreateList list={itemsPerPage[0]} /> */}
+                    <CreateList list={itemsPerPage[currentPage]} />
                 </ul>
             </div>
             
             {/* cria a paginação passando parametros para criar as paginas seguintes */}
-            <Pagination list={list} classifler={currentClassifler} filter={isChecked} currentPage={props.currentPage}></Pagination>
+            <Pagination 
+                list={list} 
+                classifler={currentClassifler} 
+                filter={isChecked} 
+                currentPage={currentPage} 
+                path={path}>
+            </Pagination>
         </>
     )
 }

@@ -33,6 +33,7 @@ export function Pagination(props) {
     const classifler = props.classifler
     const filter = props.filter
     const currentPage = parseInt(props.currentPage)
+    const path = props.path
     
     const pages = CreatePages(list)
     
@@ -43,18 +44,20 @@ export function Pagination(props) {
             // cria o paginador com o link que é gerado conforme os parametros recebidos
             if(i === currentPage) {
                 pager[i] = <li key={i} className="flex justify-center items-center h-6 w-6 font-button-buy text-base p-1 m-1 rounded-full bg-orange-500 text-white">
-                                    <Link href={{ pathname: `../consoles/${i}`, 
+                                    <Link href={{ pathname: `../${path}/${i}`, 
                                             query: { 
                                                 classifler: `${classifler}`, 
-                                                filter: `${filter}` 
+                                                filter: `${filter}`,
+                                                path: `${path}` 
                                     } }}><span className="p-2">{i}</span></Link>
                                 </li>
             } else {
                 pager[i] = <li key={i} className="flex justify-center items-center h-6 w-6 font-button-buy text-base p-1 m-1 rounded-full bg-blue-500 text-black hover:bg-orange-500 hover:text-white">
-                                    <Link href={{ pathname: `../consoles/${i}`, 
+                                    <Link href={{ pathname: `../${path}/${i}`, 
                                             query: { 
                                                 classifler: `${classifler}`, 
-                                                filter: `${filter}` 
+                                                filter: `${filter}`,
+                                                path: `${path}`  
                                     } }}><span className="p-2">{i}</span></Link>
                                 </li>
             }
