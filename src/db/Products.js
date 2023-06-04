@@ -243,7 +243,7 @@ export function gamesList() {
       price: 299.99,
       img: '../imgs/jogos/RE4ps5.jpg',
       branch: 'playstation',
-      relevance: 5,
+      relevance: 4,
       gallery: [
         '../imgs/jogos/RE4ps5.jpg'
       ]
@@ -254,7 +254,7 @@ export function gamesList() {
       price: 399.99,
       img: '../imgs/jogos/zelda_tears_of_kingdom.jpg',
       branch: 'nintendo',
-      relevance: 5,
+      relevance: 4,
       gallery: [
         '../imgs/jogos/zelda_tears_of_kingdom.jpg'
       ]
@@ -276,9 +276,163 @@ export function gamesList() {
       price: 279.99,
       img: '../imgs/jogos/sw_jedi_survivor_ps5.jpg',
       branch: 'playstation',
-      relevance: 5,
+      relevance: 4,
       gallery: [
         '../imgs/jogos/sw_jedi_survivor_ps5.jpg'
+      ]
+    },
+    {
+      id: 17,
+      name: 'Hogwarts Legacy Xbox Series S/X',
+      price: 279.99,
+      img: '../imgs/jogos/Hogwarts_legacy_xbox.jpg',
+      branch: 'xbox',
+      relevance: 3,
+      gallery: [
+        '../imgs/jogos/Hogwarts_legacy_xbox.jpg'
+      ]
+    },
+    {
+      id: 18,
+      name: 'Hogwarts Legacy Playstation 5',
+      price: 299.99,
+      img: '../imgs/jogos/Hogwarts_legacy_ps5.jpg',
+      branch: 'playstation',
+      relevance: 4,
+      gallery: [
+        '../imgs/jogos/Hogwarts_legacy_ps5.jpg'
+      ]
+    },
+    {
+      id: 19,
+      name: 'Dead Space Xbox Series S/X',
+      price: 299.99,
+      img: '../imgs/jogos/dead_space_remake_xbox.jpg',
+      branch: 'xbox',
+      relevance: 3,
+      gallery: [
+        '../imgs/jogos/dead_space_remake_xbox.jpg'
+      ]
+    },
+    {
+      id: 20,
+      name: 'Dead Space Playstation 5',
+      price: 299.99,
+      img: '../imgs/jogos/dead_space_remake_ps5.jpg',
+      branch: 'playstation',
+      relevance: 4,
+      gallery: [
+        '../imgs/jogos/dead_space_remake_ps5.jpg'
+      ]
+    },
+    {
+      id: 21,
+      name: 'Need For Speed Unbound Playstation 5',
+      price: 329.99,
+      img: '../imgs/jogos/Need_For_Speed_Unbound_ps5.jpg',
+      branch: 'playstation',
+      relevance: 3,
+      gallery: [
+        '../imgs/jogos/Need_For_Speed_Unbound_ps5.jpg'
+      ]
+    },
+    {
+      id: 22,
+      name: 'Need For Speed Unbound Xbox Series S/X',
+      price: 329.99,
+      img: '../imgs/jogos/Need_For_Speed_Unbound_xbox.jpg',
+      branch: 'xbox',
+      relevance: 2,
+      gallery: [
+        '../imgs/jogos/Need_For_Speed_Unbound_xbox.jpg'
+      ]
+    },
+    {
+      id: 23,
+      name: 'Pokémon Scarlet Nintendo Switch',
+      price: 289.99,
+      img: '../imgs/jogos/pokemon_scarlet.jpg',
+      branch: 'nintendo',
+      relevance: 2,
+      gallery: [
+        '../imgs/jogos/pokemon_scarlet.jpg'
+      ]
+    },
+    {
+      id: 24,
+      name: 'A Plague Tale: Requiem Xbox Series S/X',
+      price: 279.99,
+      img: '../imgs/jogos/a_plague_tale_requiem_xbox.jpg',
+      branch: 'xbox',
+      relevance: 4,
+      gallery: [
+        '../imgs/jogos/a_plague_tale_requiem_xbox.jpg'
+      ]
+    },
+    {
+      id: 25,
+      name: 'A Plague Tale: Requiem Playstation 5',
+      price: 279.99,
+      img: '../imgs/jogos/a_plague_tale_requiem_ps5.jpg',
+      branch: 'playstation',
+      relevance: 3,
+      gallery: [
+        '../imgs/jogos/a_plague_tale_requiem_ps5.jpg'
+      ]
+    },
+    {
+      id: 26,
+      name: 'God of War: Ragnarök Playstation 5',
+      price: 179.99,
+      img: '../imgs/jogos/GoW_Ragnarok.jpg',
+      branch: 'playstation',
+      relevance: 5,
+      gallery: [
+        '../imgs/jogos/GoW_Ragnarok.jpg'
+      ]
+    },
+    {
+      id: 27,
+      name: 'Gran Turismo 7 Playstation 5',
+      price: 139.99,
+      img: '../imgs/jogos/gran_turismo_7.jpg',
+      branch: 'playstation',
+      relevance: 3,
+      gallery: [
+        '../imgs/jogos/gran_turismo_7.jpg'
+      ]
+    },
+    {
+      id: 28,
+      name: 'Horizon Forbidden West Playstation 5',
+      price: 159.99,
+      img: '../imgs/jogos/Horizon_Forbidden_West.jpg',
+      branch: 'playstation',
+      relevance: 4,
+      gallery: [
+        '../imgs/jogos/Horizon_Forbidden_West.jpg'
+      ]
+    },
+    {
+      id: 29,
+      name: 'Elden Ring Playstation 5',
+      price: 279.99,
+      img: '../imgs/jogos/Elden_Ring_ps5.jpg',
+      branch: 'playstation',
+      relevance: 5,
+      gallery: [
+        '../imgs/jogos/Elden_Ring_ps5.jpg'
+      ]
+    },
+    {
+      id: 30,
+      name: 'Elden Ring Xbox Series S/X',
+      price: 279.99,
+      img: '../imgs/jogos/Elden_Ring_xbox.jpg',
+      branch: 'xbox',
+      relevance: 4,
+      gallery: [
+        '../imgs/jogos/Elden_Ring_xbox.jpg'
       ]
     },
   ];

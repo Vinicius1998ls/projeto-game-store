@@ -139,7 +139,7 @@ export default function ProductsList(props) {
                             </div>
 
                             <div className="p-1">
-                                <legend className="font-classifler text-white">Filtrar por marca:</legend>
+                                <legend className="font-classifler text-white">{`Filtrar por ${path === 'consoles' ? 'marca:' : 'plataforma:'}`}</legend>
                                 <div className="font-classifler text-white">
                                     <input type="checkbox" name="Xbox" id="Xbox"
                                         // marca o campo conforme o estado

@@ -8,8 +8,8 @@ function CreatePages(list) {
     let index = 1    
     
     while(listCopy.length !== 0) {
-        if(listCopy.length >= 4) {
-            pages[index] = listCopy.splice(0, 4)            
+        if(listCopy.length >= 12) {
+            pages[index] = listCopy.splice(0, 12)            
         } else {
             pages[index] = listCopy.splice(0, listCopy.length)
         }
