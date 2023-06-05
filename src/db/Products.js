@@ -234,8 +234,23 @@ export function gamesList() {
       branch: 'xbox',
       relevance: 5,
       gallery: [
-        '../imgs/jogos/RE4xbox.jpg'
-      ]
+        '../imgs/jogos/RE4xbox.jpg',
+        '../imgs/jogos/RE4xbox_2.jpg',
+        '../imgs/jogos/RE4xbox_3.jpg',
+      ],
+      cutDescription:<p>Resident Evil 4 é um remake do original de 2005. Com gráficos refeitos, jogabilidade atualizada e enredo reimaginado, mas preservando a essência do jogo original, Resident Evil 4 tem de tudo para ser o melhor jogo de horror e sobrevivência.
+        <br></br><br></br>
+        Funcionalidades do Jogo: Jogabilidade modernizada: Envolva-se em um combate frenético com os aldeões raivosos e explore uma vila europeia dominada pela loucura, e resolva quebra-cabeças para acessar novas áreas e coletar itens úteis contra os diversos métodos de ataque dos inimigos, que estão ainda mais fortes que na versão original. Acompanhe a luta constante de Leon e Ashley para sobreviver.
+      </p>,
+      completeDescription:<p>Resident Evil 4 é um remake do original de 2005. Com gráficos refeitos, jogabilidade atualizada e enredo reimaginado, mas preservando a essência do jogo original, Resident Evil 4 tem de tudo para ser o melhor jogo de horror e sobrevivência.
+      <br></br><br></br>
+      Funcionalidades do Jogo: Jogabilidade modernizada: Envolva-se em um combate frenético com os aldeões raivosos e explore uma vila europeia dominada pela loucura, e resolva quebra-cabeças para acessar novas áreas e coletar itens úteis contra os diversos métodos de ataque dos inimigos, que estão ainda mais fortes que na versão original. Acompanhe a luta constante de Leon e Ashley para sobreviver.
+      <br></br><br></br>
+      Sobreviva no fio da Faca: Faça uso inteligente das facas e outras armas recuperadas para realizar movimentos fatais em inimigos vulneráveis e até mesmo usar o elemento de surpresa para despachar silenciosamente inimigos inocentes antes que suas facas quebrem.
+      <br></br><br></br>
+      Mais recursos e poder de decisão: Os personagens favoritos dos fãs e sistemas de jogo retornam com atualizações para fornecer mais escolhas significativas ao jogador. Além da compra e personalização de armas, o jogador poderá trocar equipamentos com os personagens do jogo. Visuais Sofisticados: Resident Evil 4 oferece uma fotorrealismo de tirar o fôlego. Visuais em 4K completos com iluminação deslumbrante e combinação de sombras para criar uma atmosfera próxima e intensa.
+      <br></br><br></br>
+      História Reimaginada: Resident Evil 4 mostra os principais sentimentos de solidão e medo dos inimigos do lançamento original. Cegados pelo fanatismo, ao mesmo tempo em que fornecem representações mais sutis das motivações e relacionamentos dos personagens que definiram o ícone do horror de sobrevivência de 2005.</p>
     },
     {
       id: 13,
@@ -245,8 +260,23 @@ export function gamesList() {
       branch: 'playstation',
       relevance: 4,
       gallery: [
-        '../imgs/jogos/RE4ps5.jpg'
-      ]
+        '../imgs/jogos/RE4ps5.jpg',
+        '../imgs/jogos/RE4xbox_2.jpg',
+        '../imgs/jogos/RE4xbox_3.jpg'
+      ],
+      cutDescription:<p>Resident Evil 4 é um remake do original de 2005. Com gráficos refeitos, jogabilidade atualizada e enredo reimaginado, mas preservando a essência do jogo original, Resident Evil 4 tem de tudo para ser o melhor jogo de horror e sobrevivência.
+        <br></br><br></br>
+        Funcionalidades do Jogo: Jogabilidade modernizada: Envolva-se em um combate frenético com os aldeões raivosos e explore uma vila europeia dominada pela loucura, e resolva quebra-cabeças para acessar novas áreas e coletar itens úteis contra os diversos métodos de ataque dos inimigos, que estão ainda mais fortes que na versão original. Acompanhe a luta constante de Leon e Ashley para sobreviver.
+      </p>,
+      completeDescription:<p>Resident Evil 4 é um remake do original de 2005. Com gráficos refeitos, jogabilidade atualizada e enredo reimaginado, mas preservando a essência do jogo original, Resident Evil 4 tem de tudo para ser o melhor jogo de horror e sobrevivência.
+      <br></br><br></br>
+      Funcionalidades do Jogo: Jogabilidade modernizada: Envolva-se em um combate frenético com os aldeões raivosos e explore uma vila europeia dominada pela loucura, e resolva quebra-cabeças para acessar novas áreas e coletar itens úteis contra os diversos métodos de ataque dos inimigos, que estão ainda mais fortes que na versão original. Acompanhe a luta constante de Leon e Ashley para sobreviver.
+      <br></br><br></br>
+      Sobreviva no fio da Faca: Faça uso inteligente das facas e outras armas recuperadas para realizar movimentos fatais em inimigos vulneráveis e até mesmo usar o elemento de surpresa para despachar silenciosamente inimigos inocentes antes que suas facas quebrem.
+      <br></br><br></br>
+      Mais recursos e poder de decisão: Os personagens favoritos dos fãs e sistemas de jogo retornam com atualizações para fornecer mais escolhas significativas ao jogador. Além da compra e personalização de armas, o jogador poderá trocar equipamentos com os personagens do jogo. Visuais Sofisticados: Resident Evil 4 oferece uma fotorrealismo de tirar o fôlego. Visuais em 4K completos com iluminação deslumbrante e combinação de sombras para criar uma atmosfera próxima e intensa.
+      <br></br><br></br>
+      História Reimaginada: Resident Evil 4 mostra os principais sentimentos de solidão e medo dos inimigos do lançamento original. Cegados pelo fanatismo, ao mesmo tempo em que fornecem representações mais sutis das motivações e relacionamentos dos personagens que definiram o ícone do horror de sobrevivência de 2005.</p>
     },
     {
       id: 14,
@@ -254,7 +284,7 @@ export function gamesList() {
       price: 399.99,
       img: '../imgs/jogos/zelda_tears_of_kingdom.jpg',
       branch: 'nintendo',
-      relevance: 4,
+      relevance: 3,
       gallery: [
         '../imgs/jogos/zelda_tears_of_kingdom.jpg'
       ]
@@ -267,8 +297,12 @@ export function gamesList() {
       branch: 'xbox',
       relevance: 5,
       gallery: [
-        '../imgs/jogos/sw_jedi_survivor_xbox.jpg'
-      ]
+        '../imgs/jogos/sw_jedi_survivor_xbox.jpg',
+        '../imgs/jogos/sw_jedi_survivor_xbox_2.jpg',
+        '../imgs/jogos/sw_jedi_survivor_xbox_3.jpg',
+      ],
+      cutDescription:<p>A história de Cal Kestis continua em Star Wars Jedi: Survivor, um jogo de ação e aventura em terceira pessoa de exploração da galáxia da Respawn Entertainment, desenvolvida em colaboração com a Lucasfilm Games.</p>,
+      completeDescription:<p>A história de Cal Kestis continua em Star Wars Jedi: Survivor, um jogo de ação e aventura em terceira pessoa de exploração da galáxia da Respawn Entertainment, desenvolvida em colaboração com a Lucasfilm Games.</p>
     },
     {
       id: 16,
@@ -278,8 +312,12 @@ export function gamesList() {
       branch: 'playstation',
       relevance: 4,
       gallery: [
-        '../imgs/jogos/sw_jedi_survivor_ps5.jpg'
-      ]
+        '../imgs/jogos/sw_jedi_survivor_xbox.jpg',
+        '../imgs/jogos/sw_jedi_survivor_xbox_2.jpg',
+        '../imgs/jogos/sw_jedi_survivor_xbox_3.jpg',
+      ],
+      cutDescription:<p>A história de Cal Kestis continua em Star Wars Jedi: Survivor, um jogo de ação e aventura em terceira pessoa de exploração da galáxia da Respawn Entertainment, desenvolvida em colaboração com a Lucasfilm Games.</p>,
+      completeDescription:<p>A história de Cal Kestis continua em Star Wars Jedi: Survivor, um jogo de ação e aventura em terceira pessoa de exploração da galáxia da Respawn Entertainment, desenvolvida em colaboração com a Lucasfilm Games.</p>
     },
     {
       id: 17,
@@ -320,7 +358,7 @@ export function gamesList() {
       price: 299.99,
       img: '../imgs/jogos/dead_space_remake_ps5.jpg',
       branch: 'playstation',
-      relevance: 4,
+      relevance: 3,
       gallery: [
         '../imgs/jogos/dead_space_remake_ps5.jpg'
       ]
@@ -331,7 +369,7 @@ export function gamesList() {
       price: 329.99,
       img: '../imgs/jogos/Need_For_Speed_Unbound_ps5.jpg',
       branch: 'playstation',
-      relevance: 3,
+      relevance: 2,
       gallery: [
         '../imgs/jogos/Need_For_Speed_Unbound_ps5.jpg'
       ]
@@ -342,7 +380,7 @@ export function gamesList() {
       price: 329.99,
       img: '../imgs/jogos/Need_For_Speed_Unbound_xbox.jpg',
       branch: 'xbox',
-      relevance: 2,
+      relevance: 1,
       gallery: [
         '../imgs/jogos/Need_For_Speed_Unbound_xbox.jpg'
       ]
@@ -353,7 +391,7 @@ export function gamesList() {
       price: 289.99,
       img: '../imgs/jogos/pokemon_scarlet.jpg',
       branch: 'nintendo',
-      relevance: 2,
+      relevance: 1,
       gallery: [
         '../imgs/jogos/pokemon_scarlet.jpg'
       ]
@@ -364,7 +402,7 @@ export function gamesList() {
       price: 279.99,
       img: '../imgs/jogos/a_plague_tale_requiem_xbox.jpg',
       branch: 'xbox',
-      relevance: 4,
+      relevance: 3,
       gallery: [
         '../imgs/jogos/a_plague_tale_requiem_xbox.jpg'
       ]
@@ -375,7 +413,7 @@ export function gamesList() {
       price: 279.99,
       img: '../imgs/jogos/a_plague_tale_requiem_ps5.jpg',
       branch: 'playstation',
-      relevance: 3,
+      relevance: 2,
       gallery: [
         '../imgs/jogos/a_plague_tale_requiem_ps5.jpg'
       ]
@@ -388,8 +426,22 @@ export function gamesList() {
       branch: 'playstation',
       relevance: 5,
       gallery: [
-        '../imgs/jogos/GoW_Ragnarok.jpg'
-      ]
+        '../imgs/jogos/GoW_Ragnarok.jpg',
+        '../imgs/jogos/GoW_Ragnarok_2.jpg',
+        '../imgs/jogos/GoW_Ragnarok_3.jpg',
+      ],
+      cutDescription:<p>
+        Embarque em uma jornada épica e comovente onde Kratos e Atreus lutam entre o desejo de manterem-se unidos ou separar-se. Derrote deuses e monstros nórdicos em combates fluidos e expressivos.
+        <br></br>
+        <br></br>
+        Armas de Guerra: O Machado Leviatã, Lâminas do Caos e o Escudo Guardião retornam juntamente com uma série de novas habilidades para Kratos e Atreus.
+      </p>,
+      completeDescription:<p>
+      Embarque em uma jornada épica e comovente onde Kratos e Atreus lutam entre o desejo de manterem-se unidos ou separar-se. Derrote deuses e monstros nórdicos em combates fluidos e expressivos.
+      <br></br>
+      <br></br>
+      Armas de Guerra: O Machado Leviatã, Lâminas do Caos e o Escudo Guardião retornam juntamente com uma série de novas habilidades para Kratos e Atreus.
+    </p>
     },
     {
       id: 27,
@@ -397,7 +449,7 @@ export function gamesList() {
       price: 139.99,
       img: '../imgs/jogos/gran_turismo_7.jpg',
       branch: 'playstation',
-      relevance: 3,
+      relevance: 2,
       gallery: [
         '../imgs/jogos/gran_turismo_7.jpg'
       ]
@@ -408,7 +460,7 @@ export function gamesList() {
       price: 159.99,
       img: '../imgs/jogos/Horizon_Forbidden_West.jpg',
       branch: 'playstation',
-      relevance: 4,
+      relevance: 3,
       gallery: [
         '../imgs/jogos/Horizon_Forbidden_West.jpg'
       ]
@@ -433,6 +485,214 @@ export function gamesList() {
       relevance: 4,
       gallery: [
         '../imgs/jogos/Elden_Ring_xbox.jpg'
+      ]
+    },
+    {
+      id: 31,
+      name: 'Forza horizon 5 Xbox one Xbox Series S/X',
+      price: 199.99,
+      img: '../imgs/jogos/forza_horizon_5.jpg',
+      branch: 'xbox',
+      relevance: 4,
+      gallery: [
+        '../imgs/jogos/forza_horizon_5.jpg',
+        '../imgs/jogos/forza_horizon_5_2.jpg',
+        '../imgs/jogos/forza_horizon_5_3.jpg',
+      ],
+      
+    },
+    {
+      id: 32,
+      name: 'Halo infinite Xbox one Xbox Series S/X',
+      price: 99.99,
+      img: '../imgs/jogos/halo_infinite.jpg',
+      branch: 'xbox',
+      relevance: 4,
+      gallery: [
+        '../imgs/jogos/halo_infinite.jpg',
+        '../imgs/jogos/halo_infinite_2.jpg',
+        '../imgs/jogos/halo_infinite_3.jpg',
+      ],
+      cutDescription:<p>
+        Prepare-se para uma nova jornada em Halo Infinite e vista a armadura do maior herói da humanidade para explorar a vastidão do anel Halo em um modo história épico. No papel de Master Chief os jogadores terão impedir um clã de guerreiros Brutes que buscam reparar o anel Halo e reivindicar o controle sobre a maior ameaça da galáxia.
+        <br></br>
+        <br></br>
+        O famoso modo multiplayer de Halo está de volta, reinventado e moderno. As atualizações sazonais vão aprimorar a experiência com eventos exclusivos, modos e mapas inéditos e conteúdo totalmente focado na comunidade. Divirta-se com seus amigos em equipes de até 4 jogadores e mostre que é que manda nas partidas online.
+      </p>,
+      completeDescription:<p>
+        Prepare-se para uma nova jornada em Halo Infinite e vista a armadura do maior herói da humanidade para explorar a vastidão do anel Halo em um modo história épico. No papel de Master Chief os jogadores terão impedir um clã de guerreiros Brutes que buscam reparar o anel Halo e reivindicar o controle sobre a maior ameaça da galáxia.
+        <br></br>
+        <br></br>
+        O famoso modo multiplayer de Halo está de volta, reinventado e moderno. As atualizações sazonais vão aprimorar a experiência com eventos exclusivos, modos e mapas inéditos e conteúdo totalmente focado na comunidade. Divirta-se com seus amigos em equipes de até 4 jogadores e mostre que é que manda nas partidas online.
+      </p>,
+    },
+    {
+      id: 33,
+      name: 'Resident evil village Xbox one Xbox Series S/X',
+      price: 199.99,
+      img: '../imgs/jogos/re_village_xbox.jpg',
+      branch: 'xbox',
+      relevance: 3,
+      gallery: [
+        '../imgs/jogos/re_village_xbox.jpg'
+      ]
+    },
+    {
+      id: 34,
+      name: 'Resident evil village Playstation 4',
+      price: 199.99,
+      img: '../imgs/jogos/re_village_ps4.jpg',
+      branch: 'playstation',
+      relevance: 2,
+      gallery: [
+        '../imgs/jogos/re_village_ps4.jpg'
+      ]
+    },
+    {
+      id: 47,
+      name: 'Resident evil village Playstation 5',
+      price: 199.99,
+      img: '../imgs/jogos/re_village_ps5.jpg',
+      branch: 'playstation',
+      relevance: 1,
+      gallery: [
+        '../imgs/jogos/re_village_ps5.jpg'
+      ]
+    },
+    {
+      id: 35,
+      name: 'Metroid Dread Nintendo Switch',
+      price: 329.99,
+      img: '../imgs/jogos/metroid.jpg',
+      branch: 'nintendo',
+      relevance: 2,
+      gallery: [
+        '../imgs/jogos/metroid.jpg'
+      ]
+    },
+    {
+      id: 36,
+      name: `Assassin's Creed Valhalla Xbox one Xbox Series S/X`,
+      price: 189.99,
+      img: '../imgs/jogos/ac_valhalla_xbox.jpg',
+      branch: 'xbox',
+      relevance: 3,
+      gallery: [
+        '../imgs/jogos/ac_valhalla_xbox.jpg',
+        '../imgs/jogos/ac_valhalla_xbox_2.jpg'
+      ]
+    },
+    {
+      id: 37,
+      name: `Assassin's Creed Valhalla Playstation 4`,
+      price: 189.99,
+      img: '../imgs/jogos/ac_valhalla_ps4.jpg',
+      branch: 'playstation',
+      relevance: 2,
+      gallery: [
+        '../imgs/jogos/ac_valhalla_ps4.jpg',
+        '../imgs/jogos/ac_valhalla_xbox_2.jpg'
+      ]
+    },
+    {
+      id: 38,
+      name: `The Last of Us Part II Playstation 4`,
+      price: 189.99,
+      img: '../imgs/jogos/tlou_2.jpg',
+      branch: 'playstation',
+      relevance: 3,
+      gallery: [
+        '../imgs/jogos/tlou_2.jpg'
+      ]
+    },
+    {
+      id: 39,
+      name: `Cyberpunk 2077 Xbox one`,
+      price: 159.99,
+      img: '../imgs/jogos/cyber_punk_2077_xbox.jpg',
+      branch: 'xbox',
+      relevance: 2,
+      gallery: [
+        '../imgs/jogos/cyber_punk_2077_xbox.jpg'
+      ]
+    },
+    {
+      id: 40,
+      name: `Cyberpunk 2077 Playstation 4`,
+      price: 159.99,
+      img: '../imgs/jogos/cyber_punk_2077_ps4.jpg',
+      branch: 'playstation',
+      relevance: 3,
+      gallery: [
+        '../imgs/jogos/cyber_punk_2077_ps4.jpg'
+      ]
+    },
+    {
+      id: 41,
+      name: `Witcher 3: Wild Hunt Playstation 4`,
+      price: 99.99,
+      img: '../imgs/jogos/the_witcher_3_ps4.jpg',
+      branch: 'playstation',
+      relevance: 2,
+      gallery: [
+        '../imgs/jogos/the_witcher_3_ps4.jpg'
+      ]
+    },
+    {
+      id: 42,
+      name: `Witcher 3: Wild Hunt Xbox one`,
+      price: 99.99,
+      img: '../imgs/jogos/the_witcher_3_xbox.jpg',
+      branch: 'xbox',
+      relevance: 4,
+      gallery: [
+        '../imgs/jogos/the_witcher_3_xbox.jpg'
+      ]
+    },
+    {
+      id: 43,
+      name: `Witcher 3: Wild Hunt Nintendo Switch`,
+      price: 99.99,
+      img: '../imgs/jogos/the_witcher_3_nintendo.jpg',
+      branch: 'nintendo',
+      relevance: 3,
+      gallery: [
+        '../imgs/jogos/the_witcher_3_nintendo.jpg'
+      ]
+    },
+    {
+      id: 44,
+      name: `Red Dead Redemption 2 Xbox one`,
+      price: 129.99,
+      img: '../imgs/jogos/rdr2_xbox.jpg',
+      branch: 'xbox',
+      relevance: 4,
+      gallery: [
+        '../imgs/jogos/rdr2_xbox.jpg',
+        '../imgs/jogos/rdr2_xbox_2.jpg',
+      ]
+    },
+    {
+      id: 45,
+      name: `Red Dead Redemption 2 Playstation 4`,
+      price: 129.99,
+      img: '../imgs/jogos/rdr2_ps4.jpg',
+      branch: 'playstation',
+      relevance: 3,
+      gallery: [
+        '../imgs/jogos/rdr2_ps4.jpg',
+        '../imgs/jogos/rdr2_xbox_2.jpg',
+      ]
+    },
+    {
+      id: 46,
+      name: `Zelda: Breath Of The Wild Nintendo Switch`,
+      price: 299.99,
+      img: '../imgs/jogos/zelda_breath.jpg',
+      branch: 'nintendo',
+      relevance: 5,
+      gallery: [
+        '../imgs/jogos/zelda_breath.jpg'
       ]
     },
   ];
