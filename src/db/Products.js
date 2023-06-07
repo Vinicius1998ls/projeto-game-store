@@ -699,3 +699,22 @@ export function gamesList() {
 
   return games;
 }
+
+export function cardList() {
+
+  const cards = [
+    {
+      id: 48,
+      name: `Gift Card Xbox: 50 Reais`,
+      price: 50.00,
+      img: '../imgs/cards/gift_card_50_xbox.jpg',
+      branch: 'xbox',
+      relevance: 5,
+      gallery: [
+        '../imgs/cards/gift_card_50_xbox.jpg'
+      ]
+    },
+  ]
+
+  return cards
+}

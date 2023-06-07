@@ -10,7 +10,7 @@ export default function Games() {
 
     return(
         <>
-            <Header home='../' consoles='../consoles' games='../games' gift='GiftCard' ></Header>
+            <Header home='../' consoles='../consoles' games='../games' gift='../giftCard' ></Header>
             <main className="flex flex-col items-center">
                 {/* recebe os produtos passando parametros padroes */}
                 <ProductsList 

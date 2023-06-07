@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useRouter } from "next/router"
-import { consolesList, gamesList } from '../../db/Products.js'
+import { consolesList, gamesList, cardList } from '../../db/Products.js'
 import Header from "@/components/Header.jsx"
 import Footer from "@/components/Footer.jsx";
 
@@ -36,7 +36,8 @@ export default function ProductPage() {
     // extrai todos os itens de db
     const consoles = consolesList()
     const games = gamesList()
-    const products = consoles.concat(games)
+    const cards = cardList()
+    const products = consoles.concat(games, cards)
     // filtra procurando na lista o item com mesmo id
     const productItem = products.find(product => product.id === id)    
 
@@ -70,7 +71,7 @@ export default function ProductPage() {
 
     return (
         <>
-            <Header home='.././' consoles='../consoles' games='../games' gift='../GiftCard' ></Header>
+            <Header home='.././' consoles='../consoles' games='../games' gift='../giftCard' ></Header>
             <main className="flex justify-center">
                 <div className="flex flex-col items-center w-11/12 ">
 

@@ -5,7 +5,7 @@ import CreateList from "./CreateList"
 import Classifler from "./Classifler"
 import Filter from "./Filter"
 import { Pagination, itemsPage } from "./CreatePages"
-import { consolesList, gamesList } from "@/db/Products"
+import { cardList, consolesList, gamesList } from "@/db/Products"
 
 
 export default function ProductsList(props) {
@@ -80,8 +80,10 @@ export default function ProductsList(props) {
         let items = []
             if(path === 'consoles') {
                 items = consolesList()
-            } else {
+            } else if(path === 'games') {
                 items = gamesList()
+            } else {
+                items - cardList()
             }
         return items
     }
