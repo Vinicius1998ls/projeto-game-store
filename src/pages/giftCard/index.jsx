@@ -18,7 +18,7 @@ export default function Games() {
                     currentPage={1} 
                     classifler={'relevance'}
                     filter={[true, true, true]}
-                    path={'games'}>
+                    path={'giftCard'}>
                 </ProductsList>                
             </main>
             <Footer></Footer>

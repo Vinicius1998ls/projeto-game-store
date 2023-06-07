@@ -709,9 +709,163 @@ export function cardList() {
       price: 50.00,
       img: '../imgs/cards/gift_card_50_xbox.jpg',
       branch: 'xbox',
-      relevance: 5,
+      relevance: 3,
       gallery: [
         '../imgs/cards/gift_card_50_xbox.jpg'
+      ]
+    },
+    {
+      id: 49,
+      name: `Gift Card Xbox: 100 Reais`,
+      price: 100.00,
+      img: '../imgs/cards/gift_card_100_xbox.jpg',
+      branch: 'xbox',
+      relevance: 5,
+      gallery: [
+        '../imgs/cards/gift_card_100_xbox.jpg'
+      ]
+    },
+    {
+      id: 50,
+      name: `Gift Card Xbox: 200 Reais`,
+      price: 200.00,
+      img: '../imgs/cards/gift_card_200_xbox.jpg',
+      branch: 'xbox',
+      relevance: 4,
+      gallery: [
+        '../imgs/cards/gift_card_200_xbox.jpg'
+      ]
+    },
+    {
+      id: 51,
+      name: `Xbox Game Pass 3 Meses`,
+      price: 89.99,
+      img: '../imgs/cards/xbox_game_pass_3_meses.jpg',
+      branch: 'xbox',
+      relevance: 2,
+      gallery: [
+        '../imgs/cards/xbox_game_pass_3_meses.jpg'
+      ]
+    },
+    {
+      id: 52,
+      name: `Xbox Game Pass Ultimate 1 Mês`,
+      price: 44.99,
+      img: '../imgs/cards/xbox_game_pass_ultimate_1_meses.jpg',
+      branch: 'xbox',
+      relevance: 3,
+      gallery: [
+        '../imgs/cards/xbox_game_pass_ultimate_1_meses.jpg'
+      ]
+    },
+    {
+      id: 53,
+      name: `Xbox Game Pass Ultimate 3 Mês`,
+      price: 134.99,
+      img: '../imgs/cards/xbox_game_pass_ultimate_3_meses.jpg',
+      branch: 'xbox',
+      relevance: 4,
+      gallery: [
+        '../imgs/cards/xbox_game_pass_ultimate_3_meses.jpg'
+      ]
+    },
+    {
+      id: 54,
+      name: `Xbox Live Gold - 3 meses`,
+      price: 69.99,
+      img: '../imgs/cards/xbox_live_3.jpg',
+      branch: 'xbox',
+      relevance: 1,
+      gallery: [
+        '../imgs/cards/xbox_live_3.jpg'
+      ]
+    },
+    {
+      id: 55,
+      name: `Xbox Live Gold - 6 meses`,
+      price: 119.99,
+      img: '../imgs/cards/xbox_live_6.jpg',
+      branch: 'xbox',
+      relevance: 2,
+      gallery: [
+        '../imgs/cards/xbox_live_6.jpg'
+      ]
+    },
+    {
+      id: 56,
+      name: `Xbox Live Gold - 12 meses`,
+      price: 199.99,
+      img: '../imgs/cards/xbox_live_12.jpg',
+      branch: 'xbox',
+      relevance: 3,
+      gallery: [
+        '../imgs/cards/xbox_live_12.jpg'
+      ]
+    },
+    {
+      id: 57,
+      name: `Gift Card Playstation: 50 Reais`,
+      price: 50.00,
+      img: '../imgs/cards/gift_card_50_ps.jpg',
+      branch: 'playstation',
+      relevance: 3,
+      gallery: [
+        '../imgs/cards/gift_card_50_ps.jpg'
+      ]
+    },
+    {
+      id: 58,
+      name: `Gift Card Playstation: 100 Reais`,
+      price: 100.00,
+      img: '../imgs/cards/gift_card_100_ps.jpg',
+      branch: 'playstation',
+      relevance: 4,
+      gallery: [
+        '../imgs/cards/gift_card_100_ps.jpg'
+      ]
+    },
+    {
+      id: 59,
+      name: `Gift Card Playstation: 200 Reais`,
+      price: 200.00,
+      img: '../imgs/cards/gift_card_200_ps.jpg',
+      branch: 'playstation',
+      relevance: 5,
+      gallery: [
+        '../imgs/cards/gift_card_200_ps.jpg'
+      ]
+    },
+    {
+      id: 60,
+      name: `Gift Card Nintendo: 50 Reais`,
+      price: 50.00,
+      img: '../imgs/cards/gift_card_50_nintendo.jpg',
+      branch: 'nintendo',
+      relevance: 2,
+      gallery: [
+        '../imgs/cards/gift_card_50_nintendo.jpg'
+      ]
+    },
+    {
+      id: 61,
+      name: `Gift Card Nintendo: 100 Reais`,
+      price: 100.00,
+      img: '../imgs/cards/gift_card_100_nintendo.jpg',
+      branch: 'nintendo',
+      relevance: 3,
+      gallery: [
+        '../imgs/cards/gift_card_100_nintendo.jpg'
+      ]
+    },
+    {
+      id: 62,
+      name: `Gift Card Nintendo: 250 Reais`,
+      price: 250.00,
+      img: '../imgs/cards/gift_card_250_nintendo.jpg',
+      branch: 'nintendo',
+      relevance: 4,
+      gallery: [
+        '../imgs/cards/gift_card_250_nintendo.jpg'
       ]
     },
   ]
