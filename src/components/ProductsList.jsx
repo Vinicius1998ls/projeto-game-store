@@ -21,12 +21,12 @@ export default function ProductsList(props) {
     const oldFilter = props.filter
     const currentPage = props.currentPage
     const path = props.path
-
+    const src = props.src
     
-    // cria um estado para list que recebe os itens retornados de Filter,
-    // esses itens já vem organizados e filtrados conforme recebido os parametros via props
-    const [list, setList] = useState(Filter(oldFilter, oldList, oldClassifler))
-
+    // aplica os parametros recebido por props e cria a primeira lista
+    let firtList = Filter(oldFilter, oldList, oldClassifler)
+    // cria um estado para lista
+    const [list, setList] = useState(firtList)
     // divide a lista em paginas|retorna um array de arrays, cada um representa 1 pagina
     const itemsPerPage = itemsPage(list)
 
@@ -34,7 +34,7 @@ export default function ProductsList(props) {
     // guarda o ordenador atual para usar em Filter.jsx
     const [currentClassifler, setCurrentClassifler] = useState(oldClassifler)
 
-    // função para alterar a lista
+    // função para alterar/ordenar a lista
     function handleList(value, list) {
         // passa list para newList para permitir alteração
         let newList = [...list]
@@ -55,36 +55,60 @@ export default function ProductsList(props) {
 
     //altera o estado, marcando e desmarcando o checkbox
     function handleCheck(index) {
+
         let checkedList = [...isChecked]
         // altera o valor na posição indicada
         checkedList[index] = !checkedList[index]
         //atualiza a isChecked
         setIsChecked(checkedList)
-        let items = getProducts(path)        
-        //filtra a lista              
-        setList(Filter(checkedList, items, currentClassifler))
-        // após filtrar reencaminha para a primeira pagina com os filtros
-        console.log('productslist:', path)
-        router.push({
-            pathname: `../${path}/${1}`, 
-            query: { 
-                classifler: `${currentClassifler}`, 
-                filter: `${checkedList}`,
-                path:`${path}`
-            }
-        })
+        let items = getProducts(path)
+        // conforme a o caminho acontece ações diferentes
+        // srcPage e nextSrcPage tem ações unicas
+        if(path !== 'srcPage' && path !== 'nextSrcPage') {
+            //filtra a lista              
+            setList(Filter(checkedList, items, currentClassifler))
+            // após filtrar reencaminha para a primeira pagina com os filtros
+            router.push({
+                pathname: `../${path}/${1}`,
+                query: {
+                    classifler: `${currentClassifler}`,
+                    filter: `${checkedList}`,
+                    path: `${path}`
+                }
+            })
+            
+        } else if(path === 'nextSrcPage') {                          
+            setList(Filter(checkedList, items, currentClassifler))
+            
+            router.push({
+                pathname: `../${path}/${1}`,
+                query: {
+                    classifler: `${currentClassifler}`,
+                    filter: `${checkedList}`,
+                    path: `${path}`,
+                    src: `${src}`
+                }
+            })
+            
+        } else {
+            setList(Filter(checkedList, items, currentClassifler))
+        }
     }
 
     function getProducts(path) {
-        // console.log(path)
         let items = []
-            if(path === 'consoles') {
-                items = consolesList()
-            } else if(path === 'games') {
-                items = gamesList()
-            } else {
-                items - cardList()
-            }
+        if (path === 'consoles') {
+            items = consolesList()
+        } else if (path === 'games') {
+            items = gamesList()
+        } else if (path === 'giftCard') {
+            items = cardList()
+        } else {
+            let consoles = consolesList()
+            let games = gamesList()
+            let card = cardList()
+            items = consoles.concat(games, card)
+        }
         return items
     }
 
@@ -97,7 +121,6 @@ export default function ProductsList(props) {
             setFilterOpen(false)
         }
     }
-    
 
     return (
         <>
@@ -185,18 +208,21 @@ export default function ProductsList(props) {
             <div className="flex justify-center mt-6 z-10 min-h-[70vh]">
                 <ul className="flex flex-row flex-wrap justify-center mt-5 max-w-6xl">
                     {/* renderiza a lista conforme o array de paginas, currentPages indica qula pagina */}
-                    <CreateList list={itemsPerPage[currentPage]} />
+                    <CreateList list={itemsPerPage[currentPage]} path={path} />
                 </ul>
             </div>
-            
+
             {/* cria a paginação passando parametros para criar as paginas seguintes */}
-            <Pagination 
-                list={list} 
-                classifler={currentClassifler} 
-                filter={isChecked} 
-                currentPage={currentPage} 
-                path={path}>
+            <Pagination
+                list={list}
+                classifler={currentClassifler}
+                filter={isChecked}
+                currentPage={currentPage}
+                path={path}
+                src={src}>
             </Pagination>
+
+
         </>
     )
 }

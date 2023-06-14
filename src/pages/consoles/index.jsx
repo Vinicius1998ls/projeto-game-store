@@ -10,7 +10,7 @@ export default function Consoles() {
 
     return(
         <>
-            <Header home='../' consoles='../consoles' games='../games' gift='../giftCard' ></Header>
+            <Header home='../' consoles='../consoles' games='../games' gift='../giftCard' logo='GGS_logo.png' ></Header>
             <main className="flex flex-col items-center">
                 {/* recebe os produtos passando parametros padroes */}
                 <ProductsList 
@@ -18,7 +18,8 @@ export default function Consoles() {
                     currentPage={1} 
                     classifler={'relevance'}
                     filter={[true, true, true]}
-                    path={'consoles'}>
+                    path={'consoles'}
+                    src={null}>
                 </ProductsList>                
             </main>
             <Footer></Footer>

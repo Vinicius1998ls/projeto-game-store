@@ -42,7 +42,7 @@ export default function ConsolesPages() {
                     classifler={classifler}
                     filter={filter}
                     path={path}
-                    >
+                    src={null}>
                 </ProductsList>                
             </main>
             <Footer></Footer>

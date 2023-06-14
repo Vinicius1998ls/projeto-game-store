@@ -33,7 +33,7 @@ export default function GamesPages() {
 
     return (
         <>
-            <Header home='.././' consoles='../consoles' games='../games' gift='../giftCard' ></Header>
+            <Header home='.././' consoles='../consoles' games='../games' gift='../giftCard' logo='../GGS_logo.png'></Header>
             <main className="flex flex-col items-center">
                 {/* gera a lista conforme parametros */}
                 <ProductsList 
@@ -42,6 +42,7 @@ export default function GamesPages() {
                     classifler={classifler}
                     filter={filter}
                     path={path}
+                    src={null}
                     >
                 </ProductsList>                
             </main>

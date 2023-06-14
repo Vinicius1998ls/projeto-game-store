@@ -1,7 +1,7 @@
 import Classifler from "./Classifler"
 
 export default function Filter(checkedList, listItems, currentClassifler) {
-
+    
     let newList = listItems
     
     // remove os item desmarcados conforme o array checkedList
@@ -14,7 +14,6 @@ export default function Filter(checkedList, listItems, currentClassifler) {
     if (checkedList[2] === false) {
         newList = newList.filter(item => item.branch !== 'nintendo')
     }
-    
     // coloca a lista filtrada conforme a ordem atual
     newList = Classifler(currentClassifler, newList)
     

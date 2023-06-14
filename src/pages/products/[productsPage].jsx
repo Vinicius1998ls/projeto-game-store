@@ -71,7 +71,7 @@ export default function ProductPage() {
 
     return (
         <>
-            <Header home='.././' consoles='../consoles' games='../games' gift='../giftCard' ></Header>
+            <Header home='.././' consoles='../consoles' games='../games' gift='../giftCard' logo='../GGS_logo.png'></Header>
             <main className="flex justify-center">
                 <div className="flex flex-col items-center w-11/12 ">
 

@@ -6,7 +6,7 @@ import Footer from "@/components/Footer"
 export default function Home() {
     return (
         <>
-            <Header home='./' consoles='consoles' games='games' gift='giftCard'></Header>
+            <Header home='./' consoles='consoles' games='games' gift='giftCard' logo='GGS_logo.png'></Header>
             <main className="min-h-[80vh]">
                 <Carousel></Carousel>
             </main>
