@@ -228,7 +228,8 @@ export function gamesList() {
   const games = [
     {
       id: 3,
-      name: 'Resident evil 4 Xbox Series S/X',
+      name: 'Resident evil 4',
+      platform: 'Xbox Series S/X',
       price: 299.99,
       img: '../imgs/jogos/RE4xbox.jpg',
       branch: 'xbox',
@@ -254,7 +255,8 @@ export function gamesList() {
     },
     {
       id: 13,
-      name: 'Resident evil 4 Playstation 5',
+      name: 'Resident evil 4',
+      platform: 'Playstation 5',
       price: 299.99,
       img: '../imgs/jogos/RE4ps5.jpg',
       branch: 'playstation',
@@ -281,6 +283,7 @@ export function gamesList() {
     {
       id: 14,
       name: 'The Legend Of Zelda Tears Of The Kingdom',
+      platform: 'Nintendo Switch',
       price: 399.99,
       img: '../imgs/jogos/zelda_tears_of_kingdom.jpg',
       branch: 'nintendo',
@@ -291,7 +294,8 @@ export function gamesList() {
     },
     {
       id: 15,
-      name: 'Star wars jedi: Survivor Xbox Series S/X',
+      name: 'Star wars jedi: Survivor',
+      platform: 'Xbox Series S/X',
       price: 279.99,
       img: '../imgs/jogos/sw_jedi_survivor_xbox.jpg',
       branch: 'xbox',
@@ -306,7 +310,8 @@ export function gamesList() {
     },
     {
       id: 16,
-      name: 'Star wars jedi: Survivor Playstation 5',
+      name: 'Star wars jedi: Survivor',
+      platform: 'Playstation 5',
       price: 279.99,
       img: '../imgs/jogos/sw_jedi_survivor_ps5.jpg',
       branch: 'playstation',
@@ -321,7 +326,8 @@ export function gamesList() {
     },
     {
       id: 17,
-      name: 'Hogwarts Legacy Xbox Series S/X',
+      name: 'Hogwarts Legacy',
+      platform: 'Xbox Series S/X',
       price: 279.99,
       img: '../imgs/jogos/Hogwarts_legacy_xbox.jpg',
       branch: 'xbox',
@@ -332,7 +338,8 @@ export function gamesList() {
     },
     {
       id: 18,
-      name: 'Hogwarts Legacy Playstation 5',
+      name: 'Hogwarts Legacy',
+      platform: 'Playstation 5',
       price: 299.99,
       img: '../imgs/jogos/Hogwarts_legacy_ps5.jpg',
       branch: 'playstation',
@@ -343,7 +350,8 @@ export function gamesList() {
     },
     {
       id: 19,
-      name: 'Dead Space Xbox Series S/X',
+      name: 'Dead Space',
+      platform: 'Xbox Series S/X',
       price: 299.99,
       img: '../imgs/jogos/dead_space_remake_xbox.jpg',
       branch: 'xbox',
@@ -354,7 +362,8 @@ export function gamesList() {
     },
     {
       id: 20,
-      name: 'Dead Space Playstation 5',
+      name: 'Dead Space',
+      platform: 'Playstation 5',
       price: 299.99,
       img: '../imgs/jogos/dead_space_remake_ps5.jpg',
       branch: 'playstation',
@@ -365,7 +374,8 @@ export function gamesList() {
     },
     {
       id: 21,
-      name: 'Need For Speed Unbound Playstation 5',
+      name: 'Need For Speed Unbound',
+      platform: 'Playstation 5',
       price: 329.99,
       img: '../imgs/jogos/Need_For_Speed_Unbound_ps5.jpg',
       branch: 'playstation',
@@ -376,7 +386,8 @@ export function gamesList() {
     },
     {
       id: 22,
-      name: 'Need For Speed Unbound Xbox Series S/X',
+      name: 'Need For Speed Unbound',
+      platform: 'Xbox Series S/X',
       price: 329.99,
       img: '../imgs/jogos/Need_For_Speed_Unbound_xbox.jpg',
       branch: 'xbox',
@@ -387,7 +398,8 @@ export function gamesList() {
     },
     {
       id: 23,
-      name: 'Pokémon Scarlet Nintendo Switch',
+      name: 'Pokémon Scarlet',
+      platform: 'Nintendo Switch',
       price: 289.99,
       img: '../imgs/jogos/pokemon_scarlet.jpg',
       branch: 'nintendo',
@@ -398,7 +410,8 @@ export function gamesList() {
     },
     {
       id: 24,
-      name: 'A Plague Tale: Requiem Xbox Series S/X',
+      name: 'A Plague Tale: Requiem',
+      platform: 'Xbox Series S/X',
       price: 279.99,
       img: '../imgs/jogos/a_plague_tale_requiem_xbox.jpg',
       branch: 'xbox',
@@ -409,7 +422,8 @@ export function gamesList() {
     },
     {
       id: 25,
-      name: 'A Plague Tale: Requiem Playstation 5',
+      name: 'A Plague Tale: Requiem',
+      platform: 'Playstation 5',
       price: 279.99,
       img: '../imgs/jogos/a_plague_tale_requiem_ps5.jpg',
       branch: 'playstation',
@@ -420,7 +434,8 @@ export function gamesList() {
     },
     {
       id: 26,
-      name: 'God of War: Ragnarök Playstation 5',
+      name: 'God of War: Ragnarök',
+      platform: 'Playstation 5',
       price: 179.99,
       img: '../imgs/jogos/GoW_Ragnarok.jpg',
       branch: 'playstation',
@@ -445,7 +460,8 @@ export function gamesList() {
     },
     {
       id: 27,
-      name: 'Gran Turismo 7 Playstation 5',
+      name: 'Gran Turismo 7',
+      platform: 'Playstation 5',
       price: 139.99,
       img: '../imgs/jogos/gran_turismo_7.jpg',
       branch: 'playstation',
@@ -456,7 +472,8 @@ export function gamesList() {
     },
     {
       id: 28,
-      name: 'Horizon Forbidden West Playstation 5',
+      name: 'Horizon Forbidden West',
+      platform: 'Playstation 5',
       price: 159.99,
       img: '../imgs/jogos/Horizon_Forbidden_West.jpg',
       branch: 'playstation',
@@ -467,7 +484,8 @@ export function gamesList() {
     },
     {
       id: 29,
-      name: 'Elden Ring Playstation 5',
+      name: 'Elden Ring',
+      platform: 'Playstation 5',
       price: 279.99,
       img: '../imgs/jogos/Elden_Ring_ps5.jpg',
       branch: 'playstation',
@@ -478,7 +496,8 @@ export function gamesList() {
     },
     {
       id: 30,
-      name: 'Elden Ring Xbox Series S/X',
+      name: 'Elden Ring',
+      platform: 'Xbox Series S/X',
       price: 279.99,
       img: '../imgs/jogos/Elden_Ring_xbox.jpg',
       branch: 'xbox',
@@ -489,7 +508,8 @@ export function gamesList() {
     },
     {
       id: 31,
-      name: 'Forza horizon 5 Xbox one Xbox Series S/X',
+      name: 'Forza horizon 5',
+      platform: 'Xbox one Xbox Series S/X',
       price: 199.99,
       img: '../imgs/jogos/forza_horizon_5.jpg',
       branch: 'xbox',
@@ -503,7 +523,8 @@ export function gamesList() {
     },
     {
       id: 32,
-      name: 'Halo infinite Xbox one Xbox Series S/X',
+      name: 'Halo infinite',
+      platform: 'Xbox one Xbox Series S/X',
       price: 99.99,
       img: '../imgs/jogos/halo_infinite.jpg',
       branch: 'xbox',
@@ -528,7 +549,8 @@ export function gamesList() {
     },
     {
       id: 33,
-      name: 'Resident evil village Xbox one Xbox Series S/X',
+      name: 'Resident evil village',
+      platform: 'Xbox one Xbox Series S/X',
       price: 199.99,
       img: '../imgs/jogos/re_village_xbox.jpg',
       branch: 'xbox',
@@ -539,7 +561,8 @@ export function gamesList() {
     },
     {
       id: 34,
-      name: 'Resident evil village Playstation 4',
+      name: 'Resident evil village',
+      platform: 'Playstation 4',
       price: 199.99,
       img: '../imgs/jogos/re_village_ps4.jpg',
       branch: 'playstation',
@@ -550,7 +573,8 @@ export function gamesList() {
     },
     {
       id: 47,
-      name: 'Resident evil village Playstation 5',
+      name: 'Resident evil village',
+      platform: 'Playstation 5',
       price: 199.99,
       img: '../imgs/jogos/re_village_ps5.jpg',
       branch: 'playstation',
@@ -561,7 +585,8 @@ export function gamesList() {
     },
     {
       id: 35,
-      name: 'Metroid Dread Nintendo Switch',
+      name: 'Metroid Dread',
+      platform: 'Nintendo Switch',
       price: 329.99,
       img: '../imgs/jogos/metroid.jpg',
       branch: 'nintendo',
@@ -572,7 +597,8 @@ export function gamesList() {
     },
     {
       id: 36,
-      name: `Assassin's Creed Valhalla Xbox one Xbox Series S/X`,
+      name: `Assassin's Creed Valhalla`,
+      platform: 'Xbox one Xbox Series S/X',
       price: 189.99,
       img: '../imgs/jogos/ac_valhalla_xbox.jpg',
       branch: 'xbox',
@@ -584,7 +610,8 @@ export function gamesList() {
     },
     {
       id: 37,
-      name: `Assassin's Creed Valhalla Playstation 4`,
+      name: `Assassin's Creed Valhalla`,
+      platform: 'Playstation 4',
       price: 189.99,
       img: '../imgs/jogos/ac_valhalla_ps4.jpg',
       branch: 'playstation',
@@ -596,7 +623,8 @@ export function gamesList() {
     },
     {
       id: 38,
-      name: `The Last of Us Part II Playstation 4`,
+      name: `The Last of Us Part II`,
+      platform: 'Playstation 4',
       price: 189.99,
       img: '../imgs/jogos/tlou_2.jpg',
       branch: 'playstation',
@@ -607,7 +635,8 @@ export function gamesList() {
     },
     {
       id: 39,
-      name: `Cyberpunk 2077 Xbox one`,
+      name: `Cyberpunk 2077`,
+      platform: 'Xbox one',
       price: 159.99,
       img: '../imgs/jogos/cyber_punk_2077_xbox.jpg',
       branch: 'xbox',
@@ -618,7 +647,8 @@ export function gamesList() {
     },
     {
       id: 40,
-      name: `Cyberpunk 2077 Playstation 4`,
+      name: `Cyberpunk 2077`,
+      platform: 'Playstation 4',
       price: 159.99,
       img: '../imgs/jogos/cyber_punk_2077_ps4.jpg',
       branch: 'playstation',
@@ -629,7 +659,8 @@ export function gamesList() {
     },
     {
       id: 41,
-      name: `Witcher 3: Wild Hunt Playstation 4`,
+      name: `Witcher 3: Wild Hunt`,
+      platform: 'Playstation 4',
       price: 99.99,
       img: '../imgs/jogos/the_witcher_3_ps4.jpg',
       branch: 'playstation',
@@ -640,7 +671,8 @@ export function gamesList() {
     },
     {
       id: 42,
-      name: `Witcher 3: Wild Hunt Xbox one`,
+      name: `Witcher 3: Wild Hunt`,
+      platform: 'Xbox one',
       price: 99.99,
       img: '../imgs/jogos/the_witcher_3_xbox.jpg',
       branch: 'xbox',
@@ -651,7 +683,8 @@ export function gamesList() {
     },
     {
       id: 43,
-      name: `Witcher 3: Wild Hunt Nintendo Switch`,
+      name: `Witcher 3: Wild Hunt`,
+      platform: 'Nintendo Switch',
       price: 99.99,
       img: '../imgs/jogos/the_witcher_3_nintendo.jpg',
       branch: 'nintendo',
@@ -662,7 +695,8 @@ export function gamesList() {
     },
     {
       id: 44,
-      name: `Red Dead Redemption 2 Xbox one`,
+      name: `Red Dead Redemption 2`,
+      platform: 'Xbox one',
       price: 129.99,
       img: '../imgs/jogos/rdr2_xbox.jpg',
       branch: 'xbox',
@@ -674,7 +708,8 @@ export function gamesList() {
     },
     {
       id: 45,
-      name: `Red Dead Redemption 2 Playstation 4`,
+      name: `Red Dead Redemption 2`,
+      platform: 'Playstation 4',
       price: 129.99,
       img: '../imgs/jogos/rdr2_ps4.jpg',
       branch: 'playstation',
@@ -686,7 +721,8 @@ export function gamesList() {
     },
     {
       id: 46,
-      name: `Zelda: Breath Of The Wild Nintendo Switch`,
+      name: `The legend of Zelda: Breath Of The Wild`,
+      platform: 'Nintendo Switch',
       price: 299.99,
       img: '../imgs/jogos/zelda_breath.jpg',
       branch: 'nintendo',
