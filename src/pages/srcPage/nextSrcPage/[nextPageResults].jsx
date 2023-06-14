@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { consolesList, cardList, gamesList } from "@/db/Products";
 import ProductsList from "@/components/ProductsList";
+import GetResults from "@/components/GetResults";
 
 export default function Results() {
 
@@ -30,37 +31,14 @@ export default function Results() {
             return item
         }
     })
-    const currentPage = router.query.nextPageResults    
-
-    
+    const currentPage = router.query.nextPageResults
 
     const consoles = consolesList()
     const games = gamesList()
     const cards = cardList()
     const products = consoles.concat(games, cards)
 
-    const results = getResults(src)
-
-    function getResults(src) {
-        console.log(src)
-        let results = products.filter((product) => {            
-            const keywords = src.toLowerCase().split(" ");
-            return keywords.every((keyword) =>
-                product.name.toLowerCase().includes(keyword)
-            );
-        });
-        
-        if (results.length === 0) {
-            results = products.filter((product) => {
-                const letters = src.toLowerCase().split("");
-                return letters.every((letter) =>
-                    product.name.toLowerCase().includes(letter)
-                )
-            })
-        }
-
-        return results
-    }
+    const results = GetResults(products, src)    
 
     return (
         <>

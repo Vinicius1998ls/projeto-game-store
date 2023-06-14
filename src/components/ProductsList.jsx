@@ -6,6 +6,7 @@ import Classifler from "./Classifler"
 import Filter from "./Filter"
 import { Pagination, itemsPage } from "./CreatePages"
 import { cardList, consolesList, gamesList } from "@/db/Products"
+import GetResults from "./GetResults"
 
 
 export default function ProductsList(props) {
@@ -77,7 +78,9 @@ export default function ProductsList(props) {
                 }
             })
             
-        } else if(path === 'nextSrcPage') {                          
+        } else if(path === 'nextSrcPage') {
+            items = GetResults(items, src)
+            
             setList(Filter(checkedList, items, currentClassifler))
             
             router.push({
@@ -91,6 +94,7 @@ export default function ProductsList(props) {
             })
             
         } else {
+            items = GetResults(items, src)
             setList(Filter(checkedList, items, currentClassifler))
         }
     }
