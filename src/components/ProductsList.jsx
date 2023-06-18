@@ -13,9 +13,6 @@ export default function ProductsList(props) {
 
     const router = useRouter()
 
-    // recebe a lista e classifica
-    // const items = consolesList()
-
     // guarda os parametros
     const oldList = props.list
     const oldClassifler = props.classifler
