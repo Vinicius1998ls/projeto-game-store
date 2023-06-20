@@ -1,16 +1,14 @@
 import Link from "next/link"
-import { useEffect, useState } from "react"
-import { useRouter } from "next/router"
+import { useState } from "react"
 
-export default function Header(props) {
-
-    const router = useRouter()
+export default function Header(props) {    
 
     const homePath = props.home
     const consolesPath = props.consoles
     const gamesPath = props.games
     const giftPath = props.gift
     const logoPath = props.logo
+    const path = props.path
 
     const [menuIsOpen, setMenuIsOpen] = useState(false)
 
@@ -72,10 +70,22 @@ export default function Header(props) {
                     <img className="h-full" src={logoPath} alt="Logo" />                   
                 </Link>
 
-                <nav className="w-1/2 flex justify-around items-center">
-                    <Link className='navbar-font' href={consolesPath}>Consoles</Link>
-                    <Link className='navbar-font' href={gamesPath}>Jogos</Link>
-                    <Link className='navbar-font' href={giftPath}>Gift card</Link>
+                <nav className="w-7/12 xl:w-1/2 flex justify-around items-center">
+                    {path === 'consoles' ?
+                        <Link className='navbar-font px-4 text-white bg-orange-500 rounded-full' href={consolesPath}>Consoles</Link>
+                        :
+                        <Link className='navbar-font px-4 hover:text-white hover:bg-orange-500 rounded-full' href={consolesPath}>Consoles</Link>
+                    }
+                    {path === 'games' ?
+                        <Link className='navbar-font px-4 text-white bg-orange-500 rounded-full' href={gamesPath}>Jogos</Link>
+                        :
+                        <Link className='navbar-font px-4 hover:text-white hover:bg-orange-500 rounded-full' href={gamesPath}>Jogos</Link>
+                    }
+                    {path === 'cards' ?
+                        <Link className='navbar-font px-4 text-white bg-orange-500 rounded-full' href={giftPath}>Gift card</Link>
+                        :
+                        <Link className='navbar-font px-4 hover:text-white hover:bg-orange-500 rounded-full' href={giftPath}>Gift card</Link>
+                    }
                     {/* barra de pesquisa grande */}
                     <div className="flex bg-white xl:w-80 h-8 rounded-full md:w-64">
                         <input onKeyDown={(event) => enter(event, 'input1')} id='src-product' placeholder="Procurar..." className="p-1 m-1 ml-2 w-full focus:outline-none" type="text" />
@@ -156,10 +166,10 @@ export default function Header(props) {
                     <div className="absolute w-screen h-fit z-40">
                         <div className="flex justify-end mt-px">
                             <ul className="flex flex-col w-36 bg-blue-500 ">
-                                <li className="flex justify-end mr-5"><Link className='menu-font' href={homePath}>Home</Link></li>
-                                <li className="flex justify-end mr-5"><Link className='menu-font' href={consolesPath}>Consoles</Link></li>
-                                <li className="flex justify-end mr-5"><Link className='menu-font' href={gamesPath}>Jogos</Link></li>
-                                <li className="flex justify-end mr-5 mb-3"><Link className='menu-font' href={giftPath}>Gift card</Link></li>
+                                <li className="flex justify-end mr-5"><Link className='menu-font text-2xl' href={homePath}>Home</Link></li>
+                                <li className="flex justify-end mr-5"><Link className='menu-font text-2xl' href={consolesPath}>Consoles</Link></li>
+                                <li className="flex justify-end mr-5"><Link className='menu-font text-2xl' href={gamesPath}>Jogos</Link></li>
+                                <li className="flex justify-end mr-5 mb-3"><Link className='menu-font text-2xl' href={giftPath}>Gift card</Link></li>
                             </ul>
                         </div>
                     </div>

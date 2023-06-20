@@ -34,7 +34,7 @@ export default function CardsPages() {
 
     return (
         <>
-            <Header home='.././' consoles='../consoles' games='../games' gift='../giftCard' logo='../GGS_logo.png'></Header>
+            <Header home='.././' consoles='../consoles' games='../games' gift='../giftCard' logo='../GGS_logo.png' path='cards'></Header>
             <main className="flex flex-col items-center">
                 {/* gera a lista conforme parametros */}
                 <ProductsList 

@@ -33,7 +33,7 @@ export default function ConsolesPages() {
 
     return (
         <>
-            <Header home='.././' consoles='../consoles' games='../games' gift='../giftCard' ></Header>
+            <Header home='.././' consoles='../consoles' games='../games' gift='../giftCard' path='consoles'></Header>
             <main className="flex flex-col items-center">
                 {/* gera a lista conforme parametros */}
                 <ProductsList 

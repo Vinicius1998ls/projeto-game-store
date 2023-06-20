@@ -10,7 +10,7 @@ export default function Consoles() {
 
     return(
         <>
-            <Header home='../' consoles='../consoles' games='../games' gift='../giftCard' logo='GGS_logo.png' ></Header>
+            <Header home='../' consoles='../consoles' games='../games' gift='../giftCard' logo='GGS_logo.png' path='consoles' ></Header>
             <main className="flex flex-col items-center">
                 {/* recebe os produtos passando parametros padroes */}
                 <ProductsList 
