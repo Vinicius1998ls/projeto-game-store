@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { useState, useEffect } from "react";
+import { showList } from "@/components/ShoppingList";
 
 import Header from "@/components/Header"
 import Carousel from "@/components/Carousel"
@@ -46,10 +48,10 @@ function listNewProducts() {
                                 maximumFractionDigits: 2
                             })}
                         </p>
+                        <div className="flex justify-center">
+                            <button className="font-button-buy text-white w-10/12 h-8 bg-red-600 rounded-md mb-1">Comprar</button>
+                        </div>
                     </Link>
-                    <a className="flex justify-center" href="">
-                        <button className="font-button-buy text-white w-10/12 h-8 bg-red-600 rounded-md mb-1">Comprar</button>
-                    </a>
                 </div>
             </SwiperSlide>
         )
@@ -85,10 +87,10 @@ function getMostWanted() {
                                 maximumFractionDigits: 2
                             })}
                         </p>
+                        <div className="flex justify-center" href="">
+                            <button className="font-button-buy text-white w-10/12 h-8 bg-red-600 rounded-md mb-1">Comprar</button>
+                        </div>
                     </Link>
-                    <a className="flex justify-center" href="">
-                        <button className="font-button-buy text-white w-10/12 h-8 bg-red-600 rounded-md mb-1">Comprar</button>
-                    </a>
                 </div>
             </SwiperSlide>
         )
@@ -96,9 +98,32 @@ function getMostWanted() {
 }
 
 export default function Home() {
+    // totalList representa o total de itens no carrinho, é passado como props para Header
+    const [totalList, setTotalList] = useState(0)
+
+    useEffect(() => {
+
+        function getTotalShoppingList() {
+            if (typeof window !== "undefined") {
+                const list = showList();
+                // se não houver nada retorna zero
+                if (list === undefined || list === null) {
+                    return 0;
+                } else {
+                    // se houver algo retorna transformando em numerico
+                    return list.length;
+                }
+            }
+        }
+        // obtem o total de itens em sessionStorage
+        const items = getTotalShoppingList();
+        // atualiza o totalList que atualiza o numero do carrinho de Header
+        setTotalList(items);
+    }, []);
+
     return (
         <>
-            <Header home='./' consoles='consoles' games='games' gift='giftCard' logo='GGS_logo.png'></Header>
+            <Header totalList={totalList} home='./' consoles='consoles' games='games' gift='giftCard' logo='GGS_logo.png'></Header>
             <main className="min-h-[80vh]">
                 <Carousel></Carousel>
                 <div className="flex justify-center ">

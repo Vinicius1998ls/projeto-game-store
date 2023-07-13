@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 // divide a lista por paginas
-function CreatePages(list) {
+function Divide(list) {
     let listCopy = [...list]
 
     const pages = []
@@ -23,7 +23,7 @@ function CreatePages(list) {
 export function itemsPage(list) {
 
     // manda dividir a lista por paginas
-    const pages = CreatePages(list)
+    const pages = Divide(list)
 
     return pages
 }
@@ -39,7 +39,7 @@ export function Pagination(props) {
         path = 'srcPage/nextSrcPage'
     }
     const src = props.src
-    const pages = CreatePages(list)
+    const pages = Divide(list)
     
     function createPages() {
         let pager = []

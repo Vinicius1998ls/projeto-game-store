@@ -1,6 +1,11 @@
 import Link from "next/link"
+import { addList } from "./ShoppingList"
+// import { InsertList } from "./ShoppingList"
+
+
 
 export default function CreateList(props) {
+    
 
     // armazena o array para usar apenas list ao inves de props.list
     const list = props.list
@@ -30,9 +35,9 @@ export default function CreateList(props) {
                             })}
                         </p>
                     </Link>
-                    <a className="flex justify-center" href="">
-                        <button className="font-button-buy text-white w-11/12 h-8 bg-red-600 rounded-md mb-1">Comprar</button>
-                    </a>
+                    <div href="" className="flex justify-center" >
+                        <button onClick={() => addList(item.id, 'buy')} className="font-button-buy text-white w-11/12 h-8 bg-red-600 rounded-md mb-1">Comprar</button>
+                    </div>
                 </li>
             )
         }))

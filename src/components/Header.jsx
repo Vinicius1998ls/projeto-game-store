@@ -1,7 +1,8 @@
 import Link from "next/link"
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { showList } from "./ShoppingList"
 
-export default function Header(props) {    
+export default function Header(props) {
 
     const homePath = props.home
     const consolesPath = props.consoles
@@ -9,6 +10,7 @@ export default function Header(props) {
     const giftPath = props.gift
     const logoPath = props.logo
     const path = props.path
+    const totalList = props.totalList
 
     const [menuIsOpen, setMenuIsOpen] = useState(false)
 
@@ -38,18 +40,18 @@ export default function Header(props) {
             // pega o valor do input e armazena
             const idValue = document.getElementById('src-product').value
             // verifica se não esta vazio, caso estiver vazio nada acontece
-            if(idValue !== '') {
+            if (idValue !== '') {
                 // vai para a pagina de pesquisa com a palavra chave na url
                 window.location.href = `/srcPage/${idValue}`
             }
-        } else if(input === 'input2') {
+        } else if (input === 'input2') {
             const idValue = document.getElementById('src-product2').value
-            if(idValue !== '') {
+            if (idValue !== '') {
                 window.location.href = `/srcPage/${idValue}`
             }
         } else {
             const idValue = document.getElementById('src-product3').value
-            if(idValue !== '') {
+            if (idValue !== '') {
                 window.location.href = `/srcPage/${idValue}`
             }
         }
@@ -67,7 +69,7 @@ export default function Header(props) {
             <div className="hidden lg:flex justify-around items-center bg-blue-500 h-20">
 
                 <Link className="h-14" href={homePath}>
-                    <img className="h-full" src={logoPath} alt="Logo" />                   
+                    <img className="h-full" src={logoPath} alt="Logo" />
                 </Link>
 
                 <nav className="w-7/12 xl:w-1/2 flex justify-around items-center">
@@ -86,19 +88,28 @@ export default function Header(props) {
                         :
                         <Link className='navbar-font px-4 hover:text-white hover:bg-orange-500 rounded-full' href={giftPath}>Gift card</Link>
                     }
+
                     {/* barra de pesquisa grande */}
                     <div className="flex bg-white xl:w-80 h-8 rounded-full md:w-64">
                         <input onKeyDown={(event) => enter(event, 'input1')} id='src-product' placeholder="Procurar..." className="p-1 m-1 ml-2 w-full focus:outline-none" type="text" />
-                        <svg onClick={() => search('input1')} className="m-1 mr-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <svg onClick={() => search('input1')} className="mr-4 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                         </svg>
                     </div>
                 </nav>
 
-                <Link href="">
+                <Link href="/shoppingCart" className="flex flex-row">
                     <svg className="h-9" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
                     </svg>
+                    {totalList > 0 ?
+                        <div className="-translate-y-2 -translate-x-3">
+                            <p className=" px-2 text-white bg-red-500 rounded-full">{totalList}</p>
+
+                        </div>
+                        :
+                        null
+                    }
                 </Link>
 
             </div>
@@ -125,7 +136,7 @@ export default function Header(props) {
                             <img className="h-full" src={logoPath} alt="Logo" />
                         </Link>
 
-                        <div className="flex justify-between items-center w-fit">
+                        <div className="flex justify-between items-center w-28 sm:w-fit">
                             {/* barra de pesquisa para telas pequenas */}
                             <svg onClick={openSearch} className="sm:hidden w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
@@ -133,25 +144,33 @@ export default function Header(props) {
                             {/* barra de pesquisa para telas media */}
                             <div className="hidden sm:flex bg-white w-full h-8 rounded-full">
                                 <input onKeyDown={(event) => enter(event, 'input3')} id='src-product3' placeholder="Procurar..." className="p-1 m-1 ml-2 w-56 min-[900px]:w-80 focus:outline-none" type="text" />
-                                <svg onClick={() => search('input3')} className="m-1 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <svg onClick={() => search('input3')} className="m-1 mr-3 translate-x-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                                 </svg>
                             </div>
 
-                            <Link href="">
-                                <svg className="h-8 w-8 mx-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                            {/* =====CARRINHO===== */}
+                            <Link href="/shoppingCart" className="flex flex-row sm:mx-2">
+                                <svg className="h-9" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
                                 </svg>
+                                {totalList > 0 ?
+                                    <div className="-translate-y-2 -translate-x-3 -mr-5">
+                                        <p className=" px-2 text-white bg-red-500 rounded-full">{totalList}</p>
+                                    </div>
+                                    :
+                                    null
+                                }
                             </Link>
 
                             {/* se menuIsOpen for true mostra o icone X se não mostra as 3 listras  */}
                             {menuIsOpen ?
-                                // ao clicar chama a função openMune
-                                <svg onClick={openMenu} className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                                // ao clicar chama a função openMenu
+                                <svg onClick={openMenu} className="w-8 h-8 sm:w-10 sm:h-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                                 </svg>
                                 :
-                                <svg onClick={openMenu} className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                                <svg onClick={openMenu} className="w-8 h-8 sm:w-10 sm:h-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                                 </svg>
                             }

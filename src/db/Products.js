@@ -667,7 +667,7 @@ export function gamesList() {
     },
     {
       id: 41,
-      name: `Witcher 3: Wild Hunt`,
+      name: `The Witcher 3: Wild Hunt`,
       platform: 'Playstation 4',
       price: 99.99,
       img: '../imgs/jogos/the_witcher_3_ps4.jpg',
@@ -679,7 +679,7 @@ export function gamesList() {
     },
     {
       id: 42,
-      name: `Witcher 3: Wild Hunt`,
+      name: `The Witcher 3: Wild Hunt`,
       platform: 'Xbox one',
       price: 99.99,
       img: '../imgs/jogos/the_witcher_3_xbox.jpg',
@@ -691,7 +691,7 @@ export function gamesList() {
     },
     {
       id: 43,
-      name: `Witcher 3: Wild Hunt`,
+      name: `The Witcher 3: Wild Hunt`,
       platform: 'Nintendo Switch',
       price: 99.99,
       img: '../imgs/jogos/the_witcher_3_nintendo.jpg',

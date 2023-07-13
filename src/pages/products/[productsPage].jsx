@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { showList } from "@/components/ShoppingList";
 import { useRouter } from "next/router"
 import { consolesList, gamesList, cardList } from '../../db/Products.js'
 import Header from "@/components/Header.jsx"
 import Footer from "@/components/Footer.jsx";
+import { addList } from "@/components/ShoppingList.js";
 
 // =====Swiper=====
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -21,7 +23,43 @@ function handleShowMore(showMore, setShowMore) {
 
 export default function ProductPage() {  
     // cria um estado para mostrar a descrição e ocultar
-    const [showMore, setShowMore] = useState(false)    
+    const [showMore, setShowMore] = useState(false) 
+    
+    // totalList representa o total de itens no carrinho, é passado como props para Header
+    const [totalList, setTotalList] = useState(0)
+
+    // litita o total de itens para adicionar
+    const [addLimit, setAddLimit] = useState(0)
+
+    // atualiza o totalList/total do carrinho
+    useEffect(() => {
+
+        function getTotalShoppingList() {
+            if (typeof window !== "undefined") {
+                const list = showList();
+                // se não houver nada retorna zero
+                if (list === undefined || list === null) {
+                    return 0;
+                } else {
+                    // se houver algo retorna transformando em numerico
+                    return list.length;
+                }
+            }
+        }
+        // obtem o total de itens em sessionStorage
+        const items = getTotalShoppingList();
+        // atualiza o totalList que atualiza o numero do carrinho de Header
+        setTotalList(items);
+    }, []);
+    
+    
+
+    function updateTotalList() {
+        if(addLimit < 1) {
+            setTotalList(totalList + 1)
+            setAddLimit(addLimit + 1)
+        }
+    }
 
     const router = useRouter()
 
@@ -71,7 +109,7 @@ export default function ProductPage() {
 
     return (
         <>
-            <Header home='.././' consoles='../consoles' games='../games' gift='../giftCard' logo='../GGS_logo.png'></Header>
+            <Header totalList={totalList} home='.././' consoles='../consoles' games='../games' gift='../giftCard' logo='../GGS_logo.png'></Header>
             <main className="flex justify-center">
                 <div className="flex flex-col items-center w-11/12 ">
 
@@ -114,8 +152,12 @@ export default function ProductPage() {
                                 maximumFractionDigits: 2
                             })}
                         </p>
-                        <button className="font-button-buy text-white bg-red-600 p-2 rounded-md">Comprar agora</button>
-                        <button className="flex flex-row items-center font-button-buy text-white bg-orange-600 p-2 rounded-md mt-1 sm:mt-0">
+                        <button onClick={() => addList(productItem.id, 'buy')} className="font-button-buy text-white bg-red-600 p-2 rounded-md">Comprar agora</button>
+                        <button onClick={() => {
+                            addList(productItem.id, 'cart')
+                            updateTotalList()
+                            }}
+                            className="flex flex-row items-center font-button-buy text-white bg-orange-600 p-2 rounded-md mt-1 sm:mt-0">
                             Adicionar ao Carrinho
                             <svg className="h-5 ml-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
